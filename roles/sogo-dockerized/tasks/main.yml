@@ -1,0 +1,46 @@
+---
+# tasks file for sogo-dockerized
+
+# TODO: permanent storage for mariadb needed
+- name: create_mariadb_container
+  docker_container:
+    name: "{{ sogo_db_host }}"
+    hostname: "{{ sogo_db_host }}"
+    image: mariadb
+    restart_policy: always
+    env:
+      MYSQL_ROOT_PASSWORD: "{{ sogo_db_pass }}"
+      MYSQL_DATABASE: "{{ sogo_db_name }}"
+      MYSQL_USER: "{{ sogo_db_user }}"
+      MYSQL_PASSWORD: "{{ sogo_db_pass }}"
+
+- name: create_sogo_container
+  docker_container:
+    name: "{{ sogo_host }}"
+    hostname: "{{ sogo_host }}"
+    image: cha87de/sogo
+    restart_policy: always
+    env:
+      DB_HOST: "{{ sogo_db_host }}"
+      DB_USER: "{{ sogo_db_user }}"
+      DB_PASS: "{{ sogo_db_pass }}"
+      DB_DATABASE: "{{ sogo_db_name }}"
+      DB_USERPROFILES: "mysql://{{ sogo_db_user }}:{{ sogo_db_pass }}\
+        @{{ sogo_db_host }}:{{ sogo_db_port }}/{{ sogo_db_name }}\
+        /{{ sogo_db_user }}_user_profile"
+      DB_FOLDERINFO: "mysql://{{ sogo_db_user }}:{{ sogo_db_pass }}\
+        @{{ sogo_db_host }}:{{ sogo_db_port }}/{{ sogo_db_name }}\
+        /{{ sogo_db_user }}_folder_info"
+      DB_SESSIONSFOLDER: "mysql://{{ sogo_db_user }}:{{ sogo_db_pass }}\
+        @{{ sogo_db_host }}:{{ sogo_db_port }}/{{ sogo_db_name }}\
+        /{{ sogo_db_user }}_sessions_folder"
+      DB_USERVIEW: "mysql://{{ sogo_db_user }}:{{ sogo_db_pass }}\
+        @{{ sogo_db_host }}:{{ sogo_db_port }}/sogo/{{ sogo_db_user }}_view"
+      IMAP_SERVER: "{{ sogo_imap_server }}"
+      SIEVE_SERVER: "{{ sogo_sieve_server }}"
+      SMTP_SERVER: "{{ sogo_smtp_server }}"
+      MAILDOMAIN: "{{ sogo_mail_domain }}"
+      TITLE: "{{ sogo_title }}"
+      LANGUAGE: "{{ sogo_lang }}"
+      TIMEZONE: "{{ sogo_tz }}"
+      SUPERUSERS: "{{ sogo_superusers }}"

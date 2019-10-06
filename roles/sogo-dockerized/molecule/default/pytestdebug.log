@@ -1,0 +1,909 @@
+versions pytest-4.6.5, py-1.8.0, python-2.7.15.final.0
+cwd=/home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default
+args=['--debug', '-p', 'no:cacheprovider', '--connection=ansible', '--ansible-inventory=/home/user1/.cache/molecule/sogo-dockerized/default/inventory/ansible_inventory.yml', '/home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default/tests/test_default.py', '-vvv']
+
+  pytest_cmdline_main [hook]
+      config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+    pytest_plugin_registered [hook]
+        manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+        plugin: <Session default exitstatus='<UNSET>' testsfailed=0 testscollected=0>
+    finish pytest_plugin_registered --> [] [hook]
+    pytest_configure [hook]
+        config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+    early skip of rewriting module: py._io.terminalwriter [assertion]
+    early skip of rewriting module: py._io.unicodedata [assertion]
+    early skip of rewriting module: unicodedata [assertion]
+    early skip of rewriting module: py._io.termios [assertion]
+    early skip of rewriting module: termios [assertion]
+    early skip of rewriting module: py._io.fcntl [assertion]
+    early skip of rewriting module: py._io.struct [assertion]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <_pytest.config.Config object at 0x7f5241c2c5d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.mark' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/mark/__init__.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.main' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/main.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.runner' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/runner.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.fixtures' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/fixtures.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.helpconfig' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/helpconfig.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.python' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/python.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.terminal' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/terminal.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.debugging' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/debugging.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.unittest' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/unittest.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.capture' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/capture.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.skipping' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/skipping.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.tmpdir' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/tmpdir.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.monkeypatch' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/monkeypatch.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.recwarn' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/recwarn.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.pastebin' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/pastebin.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.nose' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/nose.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.assertion' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/assertion/__init__.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.junitxml' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/junitxml.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.resultlog' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/resultlog.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.doctest' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/doctest.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.freeze_support' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/freeze_support.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.setuponly' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/setuponly.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.setupplan' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/setupplan.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.warnings' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/warnings.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.logging' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/logging.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.reports' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/reports.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module 'testinfra.plugin' from '/home/user1/.local/lib/python2.7/site-packages/testinfra/plugin.py'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended'> err=<FDCapture 2 oldfd=6 _state='suspended'> in_=<FDCapture 0 oldfd=3 _state='started'> _state='suspended' _in_suspended='<UNSET>'> _current_item=None>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <Session default exitstatus=0 testsfailed=0 testscollected=0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <_pytest.terminal.TerminalReporter object at 0x7f5241a959d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <_pytest.logging.LoggingPlugin object at 0x7f5241a9e350>
+      finish pytest_plugin_registered --> [] [hook]
+    finish pytest_configure --> [] [hook]
+    pytest_sessionstart [hook]
+        session: <Session default exitstatus=0 testsfailed=0 testscollected=0>
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <_pytest.config.Config object at 0x7f5241c2c5d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.mark' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/mark/__init__.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.main' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/main.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.runner' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/runner.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.fixtures' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/fixtures.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.helpconfig' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/helpconfig.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.python' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/python.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.terminal' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/terminal.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.debugging' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/debugging.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.unittest' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/unittest.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.capture' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/capture.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.skipping' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/skipping.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.tmpdir' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/tmpdir.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.monkeypatch' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/monkeypatch.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.recwarn' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/recwarn.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.pastebin' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/pastebin.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.nose' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/nose.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.assertion' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/assertion/__init__.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.junitxml' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/junitxml.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.resultlog' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/resultlog.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.doctest' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/doctest.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.freeze_support' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/freeze_support.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.setuponly' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/setuponly.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.setupplan' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/setupplan.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.warnings' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/warnings.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.logging' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/logging.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module '_pytest.reports' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/reports.pyc'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <module 'testinfra.plugin' from '/home/user1/.local/lib/python2.7/site-packages/testinfra/plugin.py'>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended'> err=<FDCapture 2 oldfd=6 _state='suspended'> in_=<FDCapture 0 oldfd=3 _state='started'> _state='suspended' _in_suspended='<UNSET>'> _current_item=None>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <Session default exitstatus=0 testsfailed=0 testscollected=0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <_pytest.terminal.TerminalReporter object at 0x7f5241a959d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <_pytest.logging.LoggingPlugin object at 0x7f5241a9e350>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          plugin: <_pytest.fixtures.FixtureManager object at 0x7f5241a9e850>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_report_header [hook]
+          startdir: /home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default
+          config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+      finish pytest_report_header --> [['rootdir: /home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default', 'plugins: testinfra-3.2.0'], ['using: pytest-4.6.5 pylib-1.8.0', 'setuptools registered plugins:', u'  testinfra-3.2.0 at /home/user1/.local/lib/python2.7/site-packages/testinfra/plugin.py']] [hook]
+    finish pytest_sessionstart --> [] [hook]
+    pytest_collection [hook]
+        session: <Session default exitstatus=0 testsfailed=0 testscollected=0>
+    perform_collect <Session default exitstatus=0 testsfailed=0 testscollected=0> ['/home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default/tests/test_default.py'] [collection]
+        pytest_collectstart [hook]
+            collector: <Session default exitstatus=0 testsfailed=0 testscollected=0>
+        finish pytest_collectstart --> [] [hook]
+        pytest_make_collect_report [hook]
+            collector: <Session default exitstatus=0 testsfailed=0 testscollected=0>
+        processing argument /home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default/tests/test_default.py [collection]
+            pytest_collect_file [hook]
+                path: /home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default/tests/test_default.py
+                parent: <Session default exitstatus=0 testsfailed=0 testscollected=0>
+              pytest_pycollect_makemodule [hook]
+                  path: /home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default/tests/test_default.py
+                  parent: <Session default exitstatus=0 testsfailed=0 testscollected=0>
+              finish pytest_pycollect_makemodule --> <Module tests/test_default.py> [hook]
+            finish pytest_collect_file --> [<Module tests/test_default.py>] [hook]
+          matchnodes [<Module tests/test_default.py>] [] [collection]
+            matchnodes finished ->  1 nodes [collection]
+        finish pytest_make_collect_report --> <CollectReport '' lenresult=1 outcome='passed'> [hook]
+        pytest_collectreport [hook]
+            report: <CollectReport '' lenresult=1 outcome='passed'>
+        finish pytest_collectreport --> [] [hook]
+    genitems <Module tests/test_default.py> [collection]
+      pytest_collectstart [hook]
+          collector: <Module tests/test_default.py>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Module tests/test_default.py>
+      find_module called for: test_default [assertion]
+      matched test file (was specified on cmdline): '/home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default/tests/test_default.py' [assertion]
+      _read_pyc(/home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default/tests/test_default.py): invalid or out of date pyc [assertion]
+      rewriting '/home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default/tests/test_default.py' [assertion]
+      early skip of rewriting module: encodings.ascii [assertion]
+      matched marked file 'testinfra.utils' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/utils.py' [assertion]
+      matched marked file 'testinfra.utils.__future__' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.__future__ [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/utils/__future__.py' [assertion]
+      matched marked file 'testinfra.utils.contextlib' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.contextlib [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/utils/contextlib.py' [assertion]
+      matched marked file 'testinfra.utils.locale' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.locale [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/utils/locale.py' [assertion]
+      matched marked file 'testinfra.utils.re' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.re [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/utils/re.py' [assertion]
+      matched marked file 'testinfra.utils.shutil' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.shutil [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/utils/shutil.py' [assertion]
+      matched marked file 'testinfra.utils.tempfile' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.tempfile [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/utils/tempfile.py' [assertion]
+      matched marked file 'testinfra.utils.six' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.six [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/utils/six.py' [assertion]
+      matched marked file 'testinfra.utils.socket' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.socket [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/utils/socket.py' [assertion]
+      matched marked file 'testinfra.utils.ansible_runner' (from 'testinfra') [assertion]
+      find_module called for: testinfra.utils.ansible_runner [assertion]
+      found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/utils/ansible_runner.py' [assertion]
+      early skip of rewriting module: json [assertion]
+      early skip of rewriting module: json.decoder [assertion]
+      early skip of rewriting module: json.re [assertion]
+      early skip of rewriting module: json.sys [assertion]
+      early skip of rewriting module: json.struct [assertion]
+      early skip of rewriting module: json.json [assertion]
+      early skip of rewriting module: json.scanner [assertion]
+      early skip of rewriting module: json._json [assertion]
+      early skip of rewriting module: _json [assertion]
+      early skip of rewriting module: json.encoder [assertion]
+      early skip of rewriting module: ConfigParser [assertion]
+      matched marked file 'testinfra.backend.local' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.local [assertion]
+      found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/local.py' [assertion]
+      matched marked file 'testinfra.backend.__builtin__' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.__builtin__ [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/__builtin__.py' [assertion]
+      matched marked file 'testinfra.backend._pytest' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend._pytest [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/_pytest.py' [assertion]
+      matched marked file 'testinfra.backend.testinfra' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.testinfra [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/testinfra.py' [assertion]
+      matched marked file 'testinfra.backend.base' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.base [assertion]
+      found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/base.py' [assertion]
+      matched marked file 'testinfra.backend.collections' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.collections [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/collections.py' [assertion]
+      matched marked file 'testinfra.backend.locale' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.locale [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/locale.py' [assertion]
+      matched marked file 'testinfra.backend.logging' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.logging [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/logging.py' [assertion]
+      matched marked file 'testinfra.backend.pipes' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.pipes [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/pipes.py' [assertion]
+      early skip of rewriting module: pipes [assertion]
+      matched marked file 'testinfra.backend.subprocess' (from 'testinfra') [assertion]
+      find_module called for: testinfra.backend.subprocess [assertion]
+      rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/subprocess.py' [assertion]
+        pytest_pycollect_makeitem [hook]
+            obj: <module '_pytest.assertion.rewrite' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/assertion/rewrite.pyc'>
+            collector: <Module tests/test_default.py>
+            name: @pytest_ar
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: None
+            collector: <Module tests/test_default.py>
+            name: __spec__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: {'bytearray': <type 'bytearray'>, 'IndexError': <type 'exceptions.IndexError'>, 'all': <built-in function all>, 'help': Type help() for interactive help, or help(object) for help about object., 'vars': <built-in function vars>, 'SyntaxError': <type 'exceptions.SyntaxError'>, 'unicode': <type 'unicode'>, 'UnicodeDecodeError': <type 'exceptions.UnicodeDecodeError'>, 'memoryview': <type 'memoryview'>, 'isinstance': <built-in function isinstance>, 'copyright': Copyright (c) 2001-2018 Python Software Foundation.
+All Rights Reserved.
+
+Copyright (c) 2000 BeOpen.com.
+All Rights Reserved.
+
+Copyright (c) 1995-2001 Corporation for National Research Initiatives.
+All Rights Reserved.
+
+Copyright (c) 1991-1995 Stichting Mathematisch Centrum, Amsterdam.
+All Rights Reserved., 'NameError': <type 'exceptions.NameError'>, 'BytesWarning': <type 'exceptions.BytesWarning'>, 'dict': <type 'dict'>, 'input': <built-in function input>, 'oct': <built-in function oct>, 'bin': <built-in function bin>, 'SystemExit': <type 'exceptions.SystemExit'>, 'StandardError': <type 'exceptions.StandardError'>, 'format': <built-in function format>, 'repr': <built-in function repr>, 'sorted': <built-in function sorted>, 'False': False, 'RuntimeWarning': <type 'exceptions.RuntimeWarning'>, 'list': <type 'list'>, 'iter': <built-in function iter>, 'reload': <built-in function reload>, 'Warning': <type 'exceptions.Warning'>, '__package__': None, 'round': <built-in function round>, 'dir': <built-in function dir>, 'cmp': <built-in function cmp>, 'set': <type 'set'>, 'bytes': <type 'str'>, 'reduce': <built-in function reduce>, 'intern': <built-in function intern>, 'issubclass': <built-in function issubclass>, 'Ellipsis': Ellipsis, 'EOFError': <type 'exceptions.EOFError'>, 'locals': <built-in function locals>, 'BufferError': <type 'exceptions.BufferError'>, 'slice': <type 'slice'>, 'FloatingPointError': <type 'exceptions.FloatingPointError'>, 'sum': <built-in function sum>, 'getattr': <built-in function getattr>, 'abs': <built-in function abs>, 'exit': Use exit() or Ctrl-D (i.e. EOF) to exit, 'print': <built-in function print>, 'True': True, 'FutureWarning': <type 'exceptions.FutureWarning'>, 'ImportWarning': <type 'exceptions.ImportWarning'>, 'None': None, 'hash': <built-in function hash>, 'ReferenceError': <type 'exceptions.ReferenceError'>, 'len': <built-in function len>, 'credits':     Thanks to CWI, CNRI, BeOpen.com, Zope Corporation and a cast of thousands
+    for supporting Python development.  See www.python.org for more information., 'frozenset': <type 'frozenset'>, '__name__': '__builtin__', 'ord': <built-in function ord>, 'super': <type 'super'>, 'TypeError': <type 'exceptions.TypeError'>, 'license': Type license() to see the full license text, 'KeyboardInterrupt': <type 'exceptions.KeyboardInterrupt'>, 'UserWarning': <type 'exceptions.UserWarning'>, 'filter': <built-in function filter>, 'range': <built-in function range>, 'staticmethod': <type 'staticmethod'>, 'SystemError': <type 'exceptions.SystemError'>, 'BaseException': <type 'exceptions.BaseException'>, 'pow': <built-in function pow>, 'RuntimeError': <type 'exceptions.RuntimeError'>, 'float': <type 'float'>, 'MemoryError': <type 'exceptions.MemoryError'>, 'StopIteration': <type 'exceptions.StopIteration'>, 'globals': <built-in function globals>, 'divmod': <built-in function divmod>, 'enumerate': <type 'enumerate'>, 'apply': <built-in function apply>, 'LookupError': <type 'exceptions.LookupError'>, 'open': <built-in function open>, 'quit': Use quit() or Ctrl-D (i.e. EOF) to exit, 'basestring': <type 'basestring'>, 'UnicodeError': <type 'exceptions.UnicodeError'>, 'zip': <built-in function zip>, 'hex': <built-in function hex>, 'long': <type 'long'>, 'next': <built-in function next>, 'ImportError': <type 'exceptions.ImportError'>, 'chr': <built-in function chr>, 'xrange': <type 'xrange'>, 'type': <type 'type'>, '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", 'Exception': <type 'exceptions.Exception'>, 'tuple': <type 'tuple'>, 'UnicodeTranslateError': <type 'exceptions.UnicodeTranslateError'>, 'reversed': <type 'reversed'>, 'UnicodeEncodeError': <type 'exceptions.UnicodeEncodeError'>, 'IOError': <type 'exceptions.IOError'>, 'hasattr': <built-in function hasattr>, 'delattr': <built-in function delattr>, 'setattr': <built-in function setattr>, 'raw_input': <built-in function raw_input>, 'SyntaxWarning': <type 'exceptions.SyntaxWarning'>, 'compile': <built-in function compile>, 'ArithmeticError': <type 'exceptions.ArithmeticError'>, 'str': <type 'str'>, 'property': <type 'property'>, 'GeneratorExit': <type 'exceptions.GeneratorExit'>, 'int': <type 'int'>, '__import__': <built-in function __import__>, 'KeyError': <type 'exceptions.KeyError'>, 'coerce': <built-in function coerce>, 'PendingDeprecationWarning': <type 'exceptions.PendingDeprecationWarning'>, 'file': <type 'file'>, 'EnvironmentError': <type 'exceptions.EnvironmentError'>, 'unichr': <built-in function unichr>, 'id': <built-in function id>, 'OSError': <type 'exceptions.OSError'>, 'DeprecationWarning': <type 'exceptions.DeprecationWarning'>, 'min': <built-in function min>, 'UnicodeWarning': <type 'exceptions.UnicodeWarning'>, 'execfile': <built-in function execfile>, 'any': <built-in function any>, 'complex': <type 'complex'>, 'bool': <type 'bool'>, 'ValueError': <type 'exceptions.ValueError'>, 'NotImplemented': NotImplemented, 'map': <built-in function map>, 'buffer': <type 'buffer'>, 'max': <built-in function max>, 'object': <type 'object'>, 'TabError': <type 'exceptions.TabError'>, 'callable': <built-in function callable>, 'ZeroDivisionError': <type 'exceptions.ZeroDivisionError'>, 'eval': <built-in function eval>, '__debug__': True, 'IndentationError': <type 'exceptions.IndentationError'>, 'AssertionError': <type 'exceptions.AssertionError'>, 'classmethod': <type 'classmethod'>, 'UnboundLocalError': <type 'exceptions.UnboundLocalError'>, 'NotImplementedError': <type 'exceptions.NotImplementedError'>, 'AttributeError': <type 'exceptions.AttributeError'>, 'OverflowError': <type 'exceptions.OverflowError'>}
+            collector: <Module tests/test_default.py>
+            name: __builtins__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <module 'os' from '/usr/lib/python2.7/os.pyc'>
+            collector: <Module tests/test_default.py>
+            name: os
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: /home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default/tests/test_default.py
+            collector: <Module tests/test_default.py>
+            name: __file__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <_pytest.assertion.rewrite.AssertionRewritingHook object at 0x7f5241b2ba90>
+            collector: <Module tests/test_default.py>
+            name: __loader__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <function test_mariadb_up at 0x7f5241842e60>
+            collector: <Module tests/test_default.py>
+            name: test_mariadb_up
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x7f5241aa5e10>
+          matched marked file 'testinfra.backend.ansible' (from 'testinfra') [assertion]
+          find_module called for: testinfra.backend.ansible [assertion]
+          found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/ansible.py' [assertion]
+          early skip of rewriting module: encodings.unicode_escape [assertion]
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_mariadb_up[ansible://instance]>] [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <function test_docker_up at 0x7f5241842ed8>
+            collector: <Module tests/test_default.py>
+            name: test_docker_up
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x7f5241ab3250>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_docker_up[ansible://instance]>] [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: [u'instance']
+            collector: <Module tests/test_default.py>
+            name: testinfra_hosts
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <module 'testinfra' from '/home/user1/.local/lib/python2.7/site-packages/testinfra/__init__.pyc'>
+            collector: <Module tests/test_default.py>
+            name: testinfra
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: /home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default/tests/__pycache__/test_default.cpython-27-PYTEST.pyc
+            collector: <Module tests/test_default.py>
+            name: __cached__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: test_default
+            collector: <Module tests/test_default.py>
+            name: __name__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <function test_sogo_up at 0x7f5241842f50>
+            collector: <Module tests/test_default.py>
+            name: test_sogo_up
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x7f52417fc450>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_sogo_up[ansible://instance]>] [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: None
+            collector: <Module tests/test_default.py>
+            name: __package__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <module '__builtin__' (built-in)>
+            collector: <Module tests/test_default.py>
+            name: @py_builtins
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: None
+            collector: <Module tests/test_default.py>
+            name: __doc__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <slot wrapper '__setattr__' of 'module' objects>
+            collector: <Module tests/test_default.py>
+            name: __setattr__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <built-in method __new__ of type object at 0x55f0cb8e72a0>
+            collector: <Module tests/test_default.py>
+            name: __new__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <slot wrapper '__getattribute__' of 'module' objects>
+            collector: <Module tests/test_default.py>
+            name: __getattribute__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <slot wrapper '__delattr__' of 'module' objects>
+            collector: <Module tests/test_default.py>
+            name: __delattr__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <slot wrapper '__repr__' of 'module' objects>
+            collector: <Module tests/test_default.py>
+            name: __repr__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <member '__dict__' of 'module' objects>
+            collector: <Module tests/test_default.py>
+            name: __dict__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <slot wrapper '__init__' of 'module' objects>
+            collector: <Module tests/test_default.py>
+            name: __init__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <method '__reduce_ex__' of 'object' objects>
+            collector: <Module tests/test_default.py>
+            name: __reduce_ex__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <method '__reduce__' of 'object' objects>
+            collector: <Module tests/test_default.py>
+            name: __reduce__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <slot wrapper '__str__' of 'object' objects>
+            collector: <Module tests/test_default.py>
+            name: __str__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <method '__format__' of 'object' objects>
+            collector: <Module tests/test_default.py>
+            name: __format__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <attribute '__class__' of 'object' objects>
+            collector: <Module tests/test_default.py>
+            name: __class__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <method '__subclasshook__' of 'object' objects>
+            collector: <Module tests/test_default.py>
+            name: __subclasshook__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <slot wrapper '__hash__' of 'object' objects>
+            collector: <Module tests/test_default.py>
+            name: __hash__
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <method '__sizeof__' of 'object' objects>
+            collector: <Module tests/test_default.py>
+            name: __sizeof__
+        finish pytest_pycollect_makeitem --> None [hook]
+      finish pytest_make_collect_report --> <CollectReport 'tests/test_default.py' lenresult=3 outcome='passed'> [hook]
+    genitems <Function test_docker_up[ansible://instance]> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_docker_up[ansible://instance]>
+      finish pytest_itemcollected --> [] [hook]
+    genitems <Function test_mariadb_up[ansible://instance]> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_mariadb_up[ansible://instance]>
+      finish pytest_itemcollected --> [] [hook]
+    genitems <Function test_sogo_up[ansible://instance]> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_sogo_up[ansible://instance]>
+      finish pytest_itemcollected --> [] [hook]
+      pytest_collectreport [hook]
+          report: <CollectReport 'tests/test_default.py' lenresult=3 outcome='passed'>
+      finish pytest_collectreport --> [] [hook]
+      pytest_collection_modifyitems [hook]
+          items: [<Function test_docker_up[ansible://instance]>, <Function test_mariadb_up[ansible://instance]>, <Function test_sogo_up[ansible://instance]>]
+          session: <Session default exitstatus=0 testsfailed=0 testscollected=0>
+          config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+      finish pytest_collection_modifyitems --> [] [hook]
+      pytest_collection_finish [hook]
+          session: <Session default exitstatus=0 testsfailed=0 testscollected=0>
+        pytest_report_collectionfinish [hook]
+            items: [<Function test_docker_up[ansible://instance]>, <Function test_mariadb_up[ansible://instance]>, <Function test_sogo_up[ansible://instance]>]
+            config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+            startdir: /home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default
+        finish pytest_report_collectionfinish --> [] [hook]
+      finish pytest_collection_finish --> [] [hook]
+    finish pytest_collection --> [<Function test_docker_up[ansible://instance]>, <Function test_mariadb_up[ansible://instance]>, <Function test_sogo_up[ansible://instance]>] [hook]
+    pytest_runtestloop [hook]
+        session: <Session default exitstatus=0 testsfailed=0 testscollected=3>
+      pytest_runtest_protocol [hook]
+          item: <Function test_docker_up[ansible://instance]>
+          nextitem: <Function test_mariadb_up[ansible://instance]>
+        pytest_runtest_logstart [hook]
+            location: ('tests/test_default.py', 16, 'test_docker_up[ansible://instance]')
+            nodeid: tests/test_default.py::test_docker_up[ansible://instance]
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_docker_up[ansible://instance]>
+          pytest_fixture_setup [hook]
+              fixturedef: <FixtureDef argname='_testinfra_host' scope=u'module' baseid=''>
+              request: <SubRequest '_testinfra_host' for <Function test_docker_up[ansible://instance]>>
+          finish pytest_fixture_setup --> <testinfra.host.Host object at 0x7f5241ab3b10> [hook]
+          pytest_fixture_setup [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_docker_up[ansible://instance]>>
+          finish pytest_fixture_setup --> <testinfra.host.Host object at 0x7f5241ab3b10> [hook]
+        finish pytest_runtest_setup --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_docker_up[ansible://instance]>
+            call: <CallInfo when='setup' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_docker_up[ansible://instance]>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_docker_up[ansible://instance]>
+          matched marked file 'testinfra.modules.service' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules.service [assertion]
+          found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/service.py' [assertion]
+          matched marked file 'testinfra.modules.__builtin__' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules.__builtin__ [assertion]
+          rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/__builtin__.py' [assertion]
+          matched marked file 'testinfra.modules._pytest' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules._pytest [assertion]
+          rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/_pytest.py' [assertion]
+          matched marked file 'testinfra.modules.testinfra' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules.testinfra [assertion]
+          rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/testinfra.py' [assertion]
+          matched marked file 'testinfra.modules.base' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules.base [assertion]
+          found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/base.py' [assertion]
+          matched marked file 'testinfra.modules.systeminfo' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules.systeminfo [assertion]
+          found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/systeminfo.py' [assertion]
+          matched marked file 'testinfra.modules.re' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules.re [assertion]
+          rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/re.py' [assertion]
+          matched marked file 'testinfra.backend.ssh' (from 'testinfra') [assertion]
+          find_module called for: testinfra.backend.ssh [assertion]
+          found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/ssh.py' [assertion]
+          matched marked file 'testinfra.backend.base64' (from 'testinfra') [assertion]
+          find_module called for: testinfra.backend.base64 [assertion]
+          rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/base64.py' [assertion]
+          matched marked file 'testinfra.modules.file' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules.file [assertion]
+          found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/file.py' [assertion]
+          matched marked file 'testinfra.modules.datetime' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules.datetime [assertion]
+          rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/datetime.py' [assertion]
+          matched marked file 'testinfra.modules.six' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules.six [assertion]
+          rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/six.py' [assertion]
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_docker_up[ansible://instance]>
+            call: <CallInfo when='call' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_docker_up[ansible://instance]>
+            nextitem: <Function test_mariadb_up[ansible://instance]>
+        finish pytest_runtest_teardown --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_docker_up[ansible://instance]>
+            call: <CallInfo when='teardown' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            location: ('tests/test_default.py', 16, 'test_docker_up[ansible://instance]')
+            nodeid: tests/test_default.py::test_docker_up[ansible://instance]
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+      pytest_runtest_protocol [hook]
+          item: <Function test_mariadb_up[ansible://instance]>
+          nextitem: <Function test_sogo_up[ansible://instance]>
+        pytest_runtest_logstart [hook]
+            location: ('tests/test_default.py', 22, 'test_mariadb_up[ansible://instance]')
+            nodeid: tests/test_default.py::test_mariadb_up[ansible://instance]
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_mariadb_up[ansible://instance]>
+        finish pytest_runtest_setup --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_mariadb_up[ansible://instance]>
+            call: <CallInfo when='setup' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_mariadb_up[ansible://instance]>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_mariadb_up[ansible://instance]>
+          matched marked file 'testinfra.modules.sudo' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules.sudo [assertion]
+          rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/sudo.py' [assertion]
+          matched marked file 'testinfra.modules.docker' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules.docker [assertion]
+          found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/docker.py' [assertion]
+          matched marked file 'testinfra.modules.json' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules.json [assertion]
+          rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/json.py' [assertion]
+          matched marked file 'testinfra.modules.addr' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules.addr [assertion]
+          rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/addr.py' [assertion]
+        pytest_runtest_makereport [hook]
+            item: <Function test_mariadb_up[ansible://instance]>
+            call: <CallInfo when='call' exception: assert False
+ +  where False = <testinfra.modules.addr._AddrPort object at 0x7f5241adf110>.is_reachable
+ +    where <testinfra.modules.addr._AddrPort object at 0x7f5241adf110> = <bound method Addr.port of <addr 172.17.0.2>>(3306)
+ +      where <bound method Addr.port of <addr 172.17.0.2>> = <addr 172.17.0.2>.port>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='call' outcome='failed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='call' outcome='failed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='call' outcome='failed'>
+              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+          finish pytest_report_teststatus --> ('failed', 'F', 'FAILED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_exception_interact [hook]
+            report: <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='call' outcome='failed'>
+            node: <Function test_mariadb_up[ansible://instance]>
+            call: <CallInfo when='call' exception: assert False
+ +  where False = <testinfra.modules.addr._AddrPort object at 0x7f5241adf110>.is_reachable
+ +    where <testinfra.modules.addr._AddrPort object at 0x7f5241adf110> = <bound method Addr.port of <addr 172.17.0.2>>(3306)
+ +      where <bound method Addr.port of <addr 172.17.0.2>> = <addr 172.17.0.2>.port>
+        finish pytest_exception_interact --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_mariadb_up[ansible://instance]>
+            nextitem: <Function test_sogo_up[ansible://instance]>
+        finish pytest_runtest_teardown --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_mariadb_up[ansible://instance]>
+            call: <CallInfo when='teardown' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            location: ('tests/test_default.py', 22, 'test_mariadb_up[ansible://instance]')
+            nodeid: tests/test_default.py::test_mariadb_up[ansible://instance]
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+      pytest_runtest_protocol [hook]
+          item: <Function test_sogo_up[ansible://instance]>
+          nextitem: None
+        pytest_runtest_logstart [hook]
+            location: ('tests/test_default.py', 35, 'test_sogo_up[ansible://instance]')
+            nodeid: tests/test_default.py::test_sogo_up[ansible://instance]
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_sogo_up[ansible://instance]>
+        finish pytest_runtest_setup --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_sogo_up[ansible://instance]>
+            call: <CallInfo when='setup' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_sogo_up[ansible://instance]>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_sogo_up[ansible://instance]>
+        pytest_runtest_makereport [hook]
+            item: <Function test_sogo_up[ansible://instance]>
+            call: <CallInfo when='call' exception: assert False
+ +  where False = <testinfra.modules.addr._AddrPort object at 0x7f52415ba450>.is_reachable
+ +    where <testinfra.modules.addr._AddrPort object at 0x7f52415ba450> = <bound method Addr.port of <addr 172.17.0.3>>(80)
+ +      where <bound method Addr.port of <addr 172.17.0.3>> = <addr 172.17.0.3>.port>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='call' outcome='failed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='call' outcome='failed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='call' outcome='failed'>
+              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+          finish pytest_report_teststatus --> ('failed', 'F', 'FAILED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_exception_interact [hook]
+            report: <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='call' outcome='failed'>
+            node: <Function test_sogo_up[ansible://instance]>
+            call: <CallInfo when='call' exception: assert False
+ +  where False = <testinfra.modules.addr._AddrPort object at 0x7f52415ba450>.is_reachable
+ +    where <testinfra.modules.addr._AddrPort object at 0x7f52415ba450> = <bound method Addr.port of <addr 172.17.0.3>>(80)
+ +      where <bound method Addr.port of <addr 172.17.0.3>> = <addr 172.17.0.3>.port>
+        finish pytest_exception_interact --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_sogo_up[ansible://instance]>
+            nextitem: None
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_sogo_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_sogo_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_mariadb_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_docker_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='_testinfra_host' scope=u'module' baseid=''>
+              request: <SubRequest '_testinfra_host' for <Function test_sogo_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_mariadb_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='_testinfra_host' scope=u'module' baseid=''>
+              request: <SubRequest '_testinfra_host' for <Function test_mariadb_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_docker_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='_testinfra_host' scope=u'module' baseid=''>
+              request: <SubRequest '_testinfra_host' for <Function test_docker_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+        finish pytest_runtest_teardown --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_sogo_up[ansible://instance]>
+            call: <CallInfo when='teardown' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            location: ('tests/test_default.py', 35, 'test_sogo_up[ansible://instance]')
+            nodeid: tests/test_default.py::test_sogo_up[ansible://instance]
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+    finish pytest_runtestloop --> True [hook]
+    pytest_sessionfinish [hook]
+        session: <Session default exitstatus=1 testsfailed=2 testscollected=3>
+        exitstatus: 1
+      pytest_terminal_summary [hook]
+          config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+          exitstatus: 1
+          terminalreporter: <_pytest.terminal.TerminalReporter object at 0x7f5241a959d0>
+      finish pytest_terminal_summary --> [] [hook]
+    finish pytest_sessionfinish --> [] [hook]
+    pytest_unconfigure [hook]
+        config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+    finish pytest_unconfigure --> [] [hook]

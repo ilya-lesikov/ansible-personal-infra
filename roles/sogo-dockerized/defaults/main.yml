@@ -1,0 +1,17 @@
+---
+# defaults file for sogo-dockerized
+# sogo_db_pass: CHANGEME
+sogo_db_pass: CHANGEME
+sogo_db_user: sogo
+sogo_db_host: mariadb
+sogo_db_port: 3306
+sogo_db_name: sogo
+sogo_host: sogo
+sogo_imap_server: imaps://example.org:993
+sogo_sieve_server: siege://example.org:4190
+sogo_smtp_server: example.org
+sogo_mail_domain: example.org
+sogo_title: SOGo
+sogo_lang: English
+sogo_tz: Europe/Moscow
+sogo_superusers: ""
