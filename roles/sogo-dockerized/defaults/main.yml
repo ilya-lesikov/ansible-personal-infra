@@ -1,6 +1,4 @@
 ---
-# defaults file for sogo-dockerized
-
 sogo_net_subnet: 172.10.70.0/24
 sogo_net_gw: 172.10.70.1
 sogo_net_iprange: 172.10.70.0/24

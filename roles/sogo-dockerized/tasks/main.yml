@@ -1,6 +1,4 @@
 ---
-# tasks file for sogo-dockerized
-
 - name: create_sogo_network
   docker_network:
     name: sogo_network
