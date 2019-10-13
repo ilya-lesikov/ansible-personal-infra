@@ -3,13 +3,13 @@ cwd=/home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/defaul
 args=['--debug', '-p', 'no:cacheprovider', '--connection=ansible', '--ansible-inventory=/home/user1/.cache/molecule/sogo-dockerized/default/inventory/ansible_inventory.yml', '/home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default/tests/test_default.py', '-vvv']
 
   pytest_cmdline_main [hook]
-      config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+      config: <_pytest.config.Config object at 0x7f2f1ec955d0>
     pytest_plugin_registered [hook]
-        manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+        manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
         plugin: <Session default exitstatus='<UNSET>' testsfailed=0 testscollected=0>
     finish pytest_plugin_registered --> [] [hook]
     pytest_configure [hook]
-        config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+        config: <_pytest.config.Config object at 0x7f2f1ec955d0>
     early skip of rewriting module: py._io.terminalwriter [assertion]
     early skip of rewriting module: py._io.unicodedata [assertion]
     early skip of rewriting module: unicodedata [assertion]
@@ -18,279 +18,279 @@ args=['--debug', '-p', 'no:cacheprovider', '--connection=ansible', '--ansible-in
     early skip of rewriting module: py._io.fcntl [assertion]
     early skip of rewriting module: py._io.struct [assertion]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
-          plugin: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
+          plugin: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
-          plugin: <_pytest.config.Config object at 0x7f5241c2c5d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
+          plugin: <_pytest.config.Config object at 0x7f2f1ec955d0>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.mark' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/mark/__init__.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.main' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/main.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.runner' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/runner.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.fixtures' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/fixtures.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.helpconfig' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/helpconfig.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.python' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/python.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.terminal' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/terminal.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.debugging' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/debugging.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.unittest' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/unittest.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.capture' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/capture.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.skipping' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/skipping.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.tmpdir' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/tmpdir.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.monkeypatch' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/monkeypatch.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.recwarn' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/recwarn.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.pastebin' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/pastebin.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.nose' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/nose.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.assertion' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/assertion/__init__.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.junitxml' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/junitxml.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.resultlog' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/resultlog.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.doctest' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/doctest.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.freeze_support' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/freeze_support.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.setuponly' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/setuponly.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.setupplan' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/setupplan.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.warnings' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/warnings.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.logging' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/logging.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.reports' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/reports.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module 'testinfra.plugin' from '/home/user1/.local/lib/python2.7/site-packages/testinfra/plugin.py'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended'> err=<FDCapture 2 oldfd=6 _state='suspended'> in_=<FDCapture 0 oldfd=3 _state='started'> _state='suspended' _in_suspended='<UNSET>'> _current_item=None>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <Session default exitstatus=0 testsfailed=0 testscollected=0>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
-          plugin: <_pytest.terminal.TerminalReporter object at 0x7f5241a959d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
+          plugin: <_pytest.terminal.TerminalReporter object at 0x7f2f1eafd9d0>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
-          plugin: <_pytest.logging.LoggingPlugin object at 0x7f5241a9e350>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
+          plugin: <_pytest.logging.LoggingPlugin object at 0x7f2f1eb06350>
       finish pytest_plugin_registered --> [] [hook]
     finish pytest_configure --> [] [hook]
     pytest_sessionstart [hook]
         session: <Session default exitstatus=0 testsfailed=0 testscollected=0>
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
-          plugin: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
+          plugin: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
-          plugin: <_pytest.config.Config object at 0x7f5241c2c5d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
+          plugin: <_pytest.config.Config object at 0x7f2f1ec955d0>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.mark' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/mark/__init__.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.main' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/main.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.runner' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/runner.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.fixtures' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/fixtures.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.helpconfig' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/helpconfig.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.python' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/python.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.terminal' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/terminal.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.debugging' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/debugging.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.unittest' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/unittest.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.capture' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/capture.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.skipping' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/skipping.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.tmpdir' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/tmpdir.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.monkeypatch' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/monkeypatch.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.recwarn' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/recwarn.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.pastebin' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/pastebin.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.nose' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/nose.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.assertion' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/assertion/__init__.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.junitxml' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/junitxml.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.resultlog' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/resultlog.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.doctest' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/doctest.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.freeze_support' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/freeze_support.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.setuponly' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/setuponly.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.setupplan' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/setupplan.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.warnings' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/warnings.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.logging' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/logging.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module '_pytest.reports' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/reports.pyc'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <module 'testinfra.plugin' from '/home/user1/.local/lib/python2.7/site-packages/testinfra/plugin.py'>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended'> err=<FDCapture 2 oldfd=6 _state='suspended'> in_=<FDCapture 0 oldfd=3 _state='started'> _state='suspended' _in_suspended='<UNSET>'> _current_item=None>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
           plugin: <Session default exitstatus=0 testsfailed=0 testscollected=0>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
-          plugin: <_pytest.terminal.TerminalReporter object at 0x7f5241a959d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
+          plugin: <_pytest.terminal.TerminalReporter object at 0x7f2f1eafd9d0>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
-          plugin: <_pytest.logging.LoggingPlugin object at 0x7f5241a9e350>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
+          plugin: <_pytest.logging.LoggingPlugin object at 0x7f2f1eb06350>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          manager: <_pytest.config.PytestPluginManager object at 0x7f5245052ed0>
-          plugin: <_pytest.fixtures.FixtureManager object at 0x7f5241a9e850>
+          manager: <_pytest.config.PytestPluginManager object at 0x7f2f220baed0>
+          plugin: <_pytest.fixtures.FixtureManager object at 0x7f2f1eb06850>
       finish pytest_plugin_registered --> [] [hook]
       pytest_report_header [hook]
           startdir: /home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default
-          config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+          config: <_pytest.config.Config object at 0x7f2f1ec955d0>
       finish pytest_report_header --> [['rootdir: /home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default', 'plugins: testinfra-3.2.0'], ['using: pytest-4.6.5 pylib-1.8.0', 'setuptools registered plugins:', u'  testinfra-3.2.0 at /home/user1/.local/lib/python2.7/site-packages/testinfra/plugin.py']] [hook]
     finish pytest_sessionstart --> [] [hook]
     pytest_collection [hook]
@@ -400,10 +400,38 @@ args=['--debug', '-p', 'no:cacheprovider', '--connection=ansible', '--ansible-in
       find_module called for: testinfra.backend.subprocess [assertion]
       rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/subprocess.py' [assertion]
         pytest_pycollect_makeitem [hook]
+            obj: <function test_sogo_port_reachable at 0x7f2f1e8cbde8>
+            collector: <Module tests/test_default.py>
+            name: test_sogo_port_reachable
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x7f2f1eb0dfd0>
+          matched marked file 'testinfra.backend.ansible' (from 'testinfra') [assertion]
+          find_module called for: testinfra.backend.ansible [assertion]
+          found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/ansible.py' [assertion]
+          early skip of rewriting module: encodings.unicode_escape [assertion]
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_sogo_port_reachable[ansible://instance]>] [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <function test_docker_service_up at 0x7f2f1e8cbc08>
+            collector: <Module tests/test_default.py>
+            name: test_docker_service_up
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x7f2f1eb47590>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_docker_service_up[ansible://instance]>] [hook]
+        pytest_pycollect_makeitem [hook]
             obj: <module '_pytest.assertion.rewrite' from '/home/user1/.local/lib/python2.7/site-packages/_pytest/assertion/rewrite.pyc'>
             collector: <Module tests/test_default.py>
             name: @pytest_ar
         finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <function test_mariadb_container_up at 0x7f2f1e8cbc80>
+            collector: <Module tests/test_default.py>
+            name: test_mariadb_container_up
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x7f2f1eb20710>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_mariadb_container_up[ansible://instance]>] [hook]
         pytest_pycollect_makeitem [hook]
             obj: None
             collector: <Module tests/test_default.py>
@@ -436,39 +464,40 @@ All Rights Reserved., 'NameError': <type 'exceptions.NameError'>, 'BytesWarning'
             name: __file__
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
-            obj: <_pytest.assertion.rewrite.AssertionRewritingHook object at 0x7f5241b2ba90>
+            obj: <module 'testinfra' from '/home/user1/.local/lib/python2.7/site-packages/testinfra/__init__.pyc'>
+            collector: <Module tests/test_default.py>
+            name: testinfra
+        finish pytest_pycollect_makeitem --> None [hook]
+        pytest_pycollect_makeitem [hook]
+            obj: <_pytest.assertion.rewrite.AssertionRewritingHook object at 0x7f2f1eb93a90>
             collector: <Module tests/test_default.py>
             name: __loader__
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
-            obj: <function test_mariadb_up at 0x7f5241842e60>
+            obj: <function test_mariadb_port_reachable at 0x7f2f1e8cbcf8>
             collector: <Module tests/test_default.py>
-            name: test_mariadb_up
+            name: test_mariadb_port_reachable
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7f5241aa5e10>
-          matched marked file 'testinfra.backend.ansible' (from 'testinfra') [assertion]
-          find_module called for: testinfra.backend.ansible [assertion]
-          found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/backend/ansible.py' [assertion]
-          early skip of rewriting module: encodings.unicode_escape [assertion]
+              metafunc: <_pytest.python.Metafunc object at 0x7f2f1eb23fd0>
           finish pytest_generate_tests --> [] [hook]
-        finish pytest_pycollect_makeitem --> [<Function test_mariadb_up[ansible://instance]>] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_mariadb_port_reachable[ansible://instance]>] [hook]
         pytest_pycollect_makeitem [hook]
-            obj: <function test_docker_up at 0x7f5241842ed8>
+            obj: <function test_sogo_net_created at 0x7f2f1e8cbb90>
             collector: <Module tests/test_default.py>
-            name: test_docker_up
+            name: test_sogo_net_created
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7f5241ab3250>
+              metafunc: <_pytest.python.Metafunc object at 0x7f2f1eb23c10>
           finish pytest_generate_tests --> [] [hook]
-        finish pytest_pycollect_makeitem --> [<Function test_docker_up[ansible://instance]>] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_sogo_net_created[ansible://instance]>] [hook]
         pytest_pycollect_makeitem [hook]
             obj: [u'instance']
             collector: <Module tests/test_default.py>
             name: testinfra_hosts
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
-            obj: <module 'testinfra' from '/home/user1/.local/lib/python2.7/site-packages/testinfra/__init__.pyc'>
+            obj: <module 'time' (built-in)>
             collector: <Module tests/test_default.py>
-            name: testinfra
+            name: time
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             obj: /home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default/tests/__pycache__/test_default.cpython-27-PYTEST.pyc
@@ -480,14 +509,6 @@ All Rights Reserved., 'NameError': <type 'exceptions.NameError'>, 'BytesWarning'
             collector: <Module tests/test_default.py>
             name: __name__
         finish pytest_pycollect_makeitem --> None [hook]
-        pytest_pycollect_makeitem [hook]
-            obj: <function test_sogo_up at 0x7f5241842f50>
-            collector: <Module tests/test_default.py>
-            name: test_sogo_up
-          pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7f52417fc450>
-          finish pytest_generate_tests --> [] [hook]
-        finish pytest_pycollect_makeitem --> [<Function test_sogo_up[ansible://instance]>] [hook]
         pytest_pycollect_makeitem [hook]
             obj: None
             collector: <Module tests/test_default.py>
@@ -504,12 +525,20 @@ All Rights Reserved., 'NameError': <type 'exceptions.NameError'>, 'BytesWarning'
             name: __doc__
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
+            obj: <function test_sogo_container_up at 0x7f2f1e8cbd70>
+            collector: <Module tests/test_default.py>
+            name: test_sogo_container_up
+          pytest_generate_tests [hook]
+              metafunc: <_pytest.python.Metafunc object at 0x7f2f1eb7c4d0>
+          finish pytest_generate_tests --> [] [hook]
+        finish pytest_pycollect_makeitem --> [<Function test_sogo_container_up[ansible://instance]>] [hook]
+        pytest_pycollect_makeitem [hook]
             obj: <slot wrapper '__setattr__' of 'module' objects>
             collector: <Module tests/test_default.py>
             name: __setattr__
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
-            obj: <built-in method __new__ of type object at 0x55f0cb8e72a0>
+            obj: <built-in method __new__ of type object at 0x55942b1072a0>
             collector: <Module tests/test_default.py>
             name: __new__
         finish pytest_pycollect_makeitem --> None [hook]
@@ -578,71 +607,83 @@ All Rights Reserved., 'NameError': <type 'exceptions.NameError'>, 'BytesWarning'
             collector: <Module tests/test_default.py>
             name: __sizeof__
         finish pytest_pycollect_makeitem --> None [hook]
-      finish pytest_make_collect_report --> <CollectReport 'tests/test_default.py' lenresult=3 outcome='passed'> [hook]
-    genitems <Function test_docker_up[ansible://instance]> [collection]
+      finish pytest_make_collect_report --> <CollectReport 'tests/test_default.py' lenresult=6 outcome='passed'> [hook]
+    genitems <Function test_docker_service_up[ansible://instance]> [collection]
       pytest_itemcollected [hook]
-          item: <Function test_docker_up[ansible://instance]>
+          item: <Function test_docker_service_up[ansible://instance]>
       finish pytest_itemcollected --> [] [hook]
-    genitems <Function test_mariadb_up[ansible://instance]> [collection]
+    genitems <Function test_sogo_net_created[ansible://instance]> [collection]
       pytest_itemcollected [hook]
-          item: <Function test_mariadb_up[ansible://instance]>
+          item: <Function test_sogo_net_created[ansible://instance]>
       finish pytest_itemcollected --> [] [hook]
-    genitems <Function test_sogo_up[ansible://instance]> [collection]
+    genitems <Function test_mariadb_container_up[ansible://instance]> [collection]
       pytest_itemcollected [hook]
-          item: <Function test_sogo_up[ansible://instance]>
+          item: <Function test_mariadb_container_up[ansible://instance]>
+      finish pytest_itemcollected --> [] [hook]
+    genitems <Function test_mariadb_port_reachable[ansible://instance]> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_mariadb_port_reachable[ansible://instance]>
+      finish pytest_itemcollected --> [] [hook]
+    genitems <Function test_sogo_container_up[ansible://instance]> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_sogo_container_up[ansible://instance]>
+      finish pytest_itemcollected --> [] [hook]
+    genitems <Function test_sogo_port_reachable[ansible://instance]> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_sogo_port_reachable[ansible://instance]>
       finish pytest_itemcollected --> [] [hook]
       pytest_collectreport [hook]
-          report: <CollectReport 'tests/test_default.py' lenresult=3 outcome='passed'>
+          report: <CollectReport 'tests/test_default.py' lenresult=6 outcome='passed'>
       finish pytest_collectreport --> [] [hook]
       pytest_collection_modifyitems [hook]
-          items: [<Function test_docker_up[ansible://instance]>, <Function test_mariadb_up[ansible://instance]>, <Function test_sogo_up[ansible://instance]>]
+          items: [<Function test_docker_service_up[ansible://instance]>, <Function test_sogo_net_created[ansible://instance]>, <Function test_mariadb_container_up[ansible://instance]>, <Function test_mariadb_port_reachable[ansible://instance]>, <Function test_sogo_container_up[ansible://instance]>, <Function test_sogo_port_reachable[ansible://instance]>]
           session: <Session default exitstatus=0 testsfailed=0 testscollected=0>
-          config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+          config: <_pytest.config.Config object at 0x7f2f1ec955d0>
       finish pytest_collection_modifyitems --> [] [hook]
       pytest_collection_finish [hook]
           session: <Session default exitstatus=0 testsfailed=0 testscollected=0>
         pytest_report_collectionfinish [hook]
-            items: [<Function test_docker_up[ansible://instance]>, <Function test_mariadb_up[ansible://instance]>, <Function test_sogo_up[ansible://instance]>]
-            config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+            items: [<Function test_docker_service_up[ansible://instance]>, <Function test_sogo_net_created[ansible://instance]>, <Function test_mariadb_container_up[ansible://instance]>, <Function test_mariadb_port_reachable[ansible://instance]>, <Function test_sogo_container_up[ansible://instance]>, <Function test_sogo_port_reachable[ansible://instance]>]
+            config: <_pytest.config.Config object at 0x7f2f1ec955d0>
             startdir: /home/user1/git/ansible-personal-infra/roles/sogo-dockerized/molecule/default
         finish pytest_report_collectionfinish --> [] [hook]
       finish pytest_collection_finish --> [] [hook]
-    finish pytest_collection --> [<Function test_docker_up[ansible://instance]>, <Function test_mariadb_up[ansible://instance]>, <Function test_sogo_up[ansible://instance]>] [hook]
+    finish pytest_collection --> [<Function test_docker_service_up[ansible://instance]>, <Function test_sogo_net_created[ansible://instance]>, <Function test_mariadb_container_up[ansible://instance]>, <Function test_mariadb_port_reachable[ansible://instance]>, <Function test_sogo_container_up[ansible://instance]>, <Function test_sogo_port_reachable[ansible://instance]>] [hook]
     pytest_runtestloop [hook]
-        session: <Session default exitstatus=0 testsfailed=0 testscollected=3>
+        session: <Session default exitstatus=0 testsfailed=0 testscollected=6>
       pytest_runtest_protocol [hook]
-          item: <Function test_docker_up[ansible://instance]>
-          nextitem: <Function test_mariadb_up[ansible://instance]>
+          item: <Function test_docker_service_up[ansible://instance]>
+          nextitem: <Function test_sogo_net_created[ansible://instance]>
         pytest_runtest_logstart [hook]
-            location: ('tests/test_default.py', 16, 'test_docker_up[ansible://instance]')
-            nodeid: tests/test_default.py::test_docker_up[ansible://instance]
+            location: ('tests/test_default.py', 10, 'test_docker_service_up[ansible://instance]')
+            nodeid: tests/test_default.py::test_docker_service_up[ansible://instance]
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
-            item: <Function test_docker_up[ansible://instance]>
+            item: <Function test_docker_service_up[ansible://instance]>
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='_testinfra_host' scope=u'module' baseid=''>
-              request: <SubRequest '_testinfra_host' for <Function test_docker_up[ansible://instance]>>
-          finish pytest_fixture_setup --> <testinfra.host.Host object at 0x7f5241ab3b10> [hook]
+              request: <SubRequest '_testinfra_host' for <Function test_docker_service_up[ansible://instance]>>
+          finish pytest_fixture_setup --> <testinfra.host.Host object at 0x7f2f1eb47490> [hook]
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
-              request: <SubRequest 'host' for <Function test_docker_up[ansible://instance]>>
-          finish pytest_fixture_setup --> <testinfra.host.Host object at 0x7f5241ab3b10> [hook]
+              request: <SubRequest 'host' for <Function test_docker_service_up[ansible://instance]>>
+          finish pytest_fixture_setup --> <testinfra.host.Host object at 0x7f2f1eb47490> [hook]
         finish pytest_runtest_setup --> [] [hook]
         pytest_runtest_makereport [hook]
-            item: <Function test_docker_up[ansible://instance]>
+            item: <Function test_docker_service_up[ansible://instance]>
             call: <CallInfo when='setup' result: []>
-        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='setup' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_docker_service_up[ansible://instance]' when='setup' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='setup' outcome='passed'>
+            report: <TestReport 'tests/test_default.py::test_docker_service_up[ansible://instance]' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+              report: <TestReport 'tests/test_default.py::test_docker_service_up[ansible://instance]' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
-            item: <Function test_docker_up[ansible://instance]>
+            item: <Function test_docker_service_up[ansible://instance]>
           pytest_pyfunc_call [hook]
-              pyfuncitem: <Function test_docker_up[ansible://instance]>
+              pyfuncitem: <Function test_docker_service_up[ansible://instance]>
           matched marked file 'testinfra.modules.service' (from 'testinfra') [assertion]
           find_module called for: testinfra.modules.service [assertion]
           found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/service.py' [assertion]
@@ -682,228 +723,420 @@ All Rights Reserved., 'NameError': <type 'exceptions.NameError'>, 'BytesWarning'
           finish pytest_pyfunc_call --> True [hook]
         finish pytest_runtest_call --> [] [hook]
         pytest_runtest_makereport [hook]
-            item: <Function test_docker_up[ansible://instance]>
+            item: <Function test_docker_service_up[ansible://instance]>
             call: <CallInfo when='call' result: []>
-        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='call' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_docker_service_up[ansible://instance]' when='call' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='call' outcome='passed'>
+            report: <TestReport 'tests/test_default.py::test_docker_service_up[ansible://instance]' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+              report: <TestReport 'tests/test_default.py::test_docker_service_up[ansible://instance]' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
-            item: <Function test_docker_up[ansible://instance]>
-            nextitem: <Function test_mariadb_up[ansible://instance]>
+            item: <Function test_docker_service_up[ansible://instance]>
+            nextitem: <Function test_sogo_net_created[ansible://instance]>
         finish pytest_runtest_teardown --> [] [hook]
         pytest_runtest_makereport [hook]
-            item: <Function test_docker_up[ansible://instance]>
+            item: <Function test_docker_service_up[ansible://instance]>
             call: <CallInfo when='teardown' result: []>
-        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='teardown' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_docker_service_up[ansible://instance]' when='teardown' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='teardown' outcome='passed'>
+            report: <TestReport 'tests/test_default.py::test_docker_service_up[ansible://instance]' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/test_default.py::test_docker_up[ansible://instance]' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+              report: <TestReport 'tests/test_default.py::test_docker_service_up[ansible://instance]' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
-            location: ('tests/test_default.py', 16, 'test_docker_up[ansible://instance]')
-            nodeid: tests/test_default.py::test_docker_up[ansible://instance]
+            location: ('tests/test_default.py', 10, 'test_docker_service_up[ansible://instance]')
+            nodeid: tests/test_default.py::test_docker_service_up[ansible://instance]
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
-          item: <Function test_mariadb_up[ansible://instance]>
-          nextitem: <Function test_sogo_up[ansible://instance]>
+          item: <Function test_sogo_net_created[ansible://instance]>
+          nextitem: <Function test_mariadb_container_up[ansible://instance]>
         pytest_runtest_logstart [hook]
-            location: ('tests/test_default.py', 22, 'test_mariadb_up[ansible://instance]')
-            nodeid: tests/test_default.py::test_mariadb_up[ansible://instance]
+            location: ('tests/test_default.py', 16, 'test_sogo_net_created[ansible://instance]')
+            nodeid: tests/test_default.py::test_sogo_net_created[ansible://instance]
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
-            item: <Function test_mariadb_up[ansible://instance]>
+            item: <Function test_sogo_net_created[ansible://instance]>
         finish pytest_runtest_setup --> [] [hook]
         pytest_runtest_makereport [hook]
-            item: <Function test_mariadb_up[ansible://instance]>
+            item: <Function test_sogo_net_created[ansible://instance]>
             call: <CallInfo when='setup' result: []>
-        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='setup' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_net_created[ansible://instance]' when='setup' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='setup' outcome='passed'>
+            report: <TestReport 'tests/test_default.py::test_sogo_net_created[ansible://instance]' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+              report: <TestReport 'tests/test_default.py::test_sogo_net_created[ansible://instance]' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
-            item: <Function test_mariadb_up[ansible://instance]>
+            item: <Function test_sogo_net_created[ansible://instance]>
           pytest_pyfunc_call [hook]
-              pyfuncitem: <Function test_mariadb_up[ansible://instance]>
+              pyfuncitem: <Function test_sogo_net_created[ansible://instance]>
           matched marked file 'testinfra.modules.sudo' (from 'testinfra') [assertion]
           find_module called for: testinfra.modules.sudo [assertion]
-          rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/sudo.py' [assertion]
+          found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/sudo.py' [assertion]
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_sogo_net_created[ansible://instance]>
+            call: <CallInfo when='call' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_net_created[ansible://instance]' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_sogo_net_created[ansible://instance]' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_sogo_net_created[ansible://instance]' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_sogo_net_created[ansible://instance]>
+            nextitem: <Function test_mariadb_container_up[ansible://instance]>
+        finish pytest_runtest_teardown --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_sogo_net_created[ansible://instance]>
+            call: <CallInfo when='teardown' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_net_created[ansible://instance]' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_sogo_net_created[ansible://instance]' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_sogo_net_created[ansible://instance]' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            location: ('tests/test_default.py', 16, 'test_sogo_net_created[ansible://instance]')
+            nodeid: tests/test_default.py::test_sogo_net_created[ansible://instance]
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+      pytest_runtest_protocol [hook]
+          item: <Function test_mariadb_container_up[ansible://instance]>
+          nextitem: <Function test_mariadb_port_reachable[ansible://instance]>
+        pytest_runtest_logstart [hook]
+            location: ('tests/test_default.py', 21, 'test_mariadb_container_up[ansible://instance]')
+            nodeid: tests/test_default.py::test_mariadb_container_up[ansible://instance]
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_mariadb_container_up[ansible://instance]>
+        finish pytest_runtest_setup --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_mariadb_container_up[ansible://instance]>
+            call: <CallInfo when='setup' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_mariadb_container_up[ansible://instance]' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_mariadb_container_up[ansible://instance]' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_mariadb_container_up[ansible://instance]' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_mariadb_container_up[ansible://instance]>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_mariadb_container_up[ansible://instance]>
           matched marked file 'testinfra.modules.docker' (from 'testinfra') [assertion]
           find_module called for: testinfra.modules.docker [assertion]
           found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/docker.py' [assertion]
           matched marked file 'testinfra.modules.json' (from 'testinfra') [assertion]
           find_module called for: testinfra.modules.json [assertion]
           rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/json.py' [assertion]
-          matched marked file 'testinfra.modules.addr' (from 'testinfra') [assertion]
-          find_module called for: testinfra.modules.addr [assertion]
-          rewriting '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/addr.py' [assertion]
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> [] [hook]
         pytest_runtest_makereport [hook]
-            item: <Function test_mariadb_up[ansible://instance]>
-            call: <CallInfo when='call' exception: assert False
- +  where False = <testinfra.modules.addr._AddrPort object at 0x7f5241adf110>.is_reachable
- +    where <testinfra.modules.addr._AddrPort object at 0x7f5241adf110> = <bound method Addr.port of <addr 172.17.0.2>>(3306)
- +      where <bound method Addr.port of <addr 172.17.0.2>> = <addr 172.17.0.2>.port>
-        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='call' outcome='failed'> [hook]
+            item: <Function test_mariadb_container_up[ansible://instance]>
+            call: <CallInfo when='call' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_mariadb_container_up[ansible://instance]' when='call' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='call' outcome='failed'>
+            report: <TestReport 'tests/test_default.py::test_mariadb_container_up[ansible://instance]' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='call' outcome='failed'>
-              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
-          finish pytest_report_teststatus --> ('failed', 'F', 'FAILED') [hook]
+              report: <TestReport 'tests/test_default.py::test_mariadb_container_up[ansible://instance]' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
-        pytest_exception_interact [hook]
-            report: <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='call' outcome='failed'>
-            node: <Function test_mariadb_up[ansible://instance]>
-            call: <CallInfo when='call' exception: assert False
- +  where False = <testinfra.modules.addr._AddrPort object at 0x7f5241adf110>.is_reachable
- +    where <testinfra.modules.addr._AddrPort object at 0x7f5241adf110> = <bound method Addr.port of <addr 172.17.0.2>>(3306)
- +      where <bound method Addr.port of <addr 172.17.0.2>> = <addr 172.17.0.2>.port>
-        finish pytest_exception_interact --> [] [hook]
         pytest_runtest_teardown [hook]
-            item: <Function test_mariadb_up[ansible://instance]>
-            nextitem: <Function test_sogo_up[ansible://instance]>
+            item: <Function test_mariadb_container_up[ansible://instance]>
+            nextitem: <Function test_mariadb_port_reachable[ansible://instance]>
         finish pytest_runtest_teardown --> [] [hook]
         pytest_runtest_makereport [hook]
-            item: <Function test_mariadb_up[ansible://instance]>
+            item: <Function test_mariadb_container_up[ansible://instance]>
             call: <CallInfo when='teardown' result: []>
-        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='teardown' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_mariadb_container_up[ansible://instance]' when='teardown' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='teardown' outcome='passed'>
+            report: <TestReport 'tests/test_default.py::test_mariadb_container_up[ansible://instance]' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/test_default.py::test_mariadb_up[ansible://instance]' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+              report: <TestReport 'tests/test_default.py::test_mariadb_container_up[ansible://instance]' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
-            location: ('tests/test_default.py', 22, 'test_mariadb_up[ansible://instance]')
-            nodeid: tests/test_default.py::test_mariadb_up[ansible://instance]
+            location: ('tests/test_default.py', 21, 'test_mariadb_container_up[ansible://instance]')
+            nodeid: tests/test_default.py::test_mariadb_container_up[ansible://instance]
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
-          item: <Function test_sogo_up[ansible://instance]>
-          nextitem: None
+          item: <Function test_mariadb_port_reachable[ansible://instance]>
+          nextitem: <Function test_sogo_container_up[ansible://instance]>
         pytest_runtest_logstart [hook]
-            location: ('tests/test_default.py', 35, 'test_sogo_up[ansible://instance]')
-            nodeid: tests/test_default.py::test_sogo_up[ansible://instance]
+            location: ('tests/test_default.py', 29, 'test_mariadb_port_reachable[ansible://instance]')
+            nodeid: tests/test_default.py::test_mariadb_port_reachable[ansible://instance]
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
-            item: <Function test_sogo_up[ansible://instance]>
+            item: <Function test_mariadb_port_reachable[ansible://instance]>
         finish pytest_runtest_setup --> [] [hook]
         pytest_runtest_makereport [hook]
-            item: <Function test_sogo_up[ansible://instance]>
+            item: <Function test_mariadb_port_reachable[ansible://instance]>
             call: <CallInfo when='setup' result: []>
-        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='setup' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_mariadb_port_reachable[ansible://instance]' when='setup' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='setup' outcome='passed'>
+            report: <TestReport 'tests/test_default.py::test_mariadb_port_reachable[ansible://instance]' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+              report: <TestReport 'tests/test_default.py::test_mariadb_port_reachable[ansible://instance]' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
-            item: <Function test_sogo_up[ansible://instance]>
+            item: <Function test_mariadb_port_reachable[ansible://instance]>
           pytest_pyfunc_call [hook]
-              pyfuncitem: <Function test_sogo_up[ansible://instance]>
+              pyfuncitem: <Function test_mariadb_port_reachable[ansible://instance]>
+          matched marked file 'testinfra.modules.addr' (from 'testinfra') [assertion]
+          find_module called for: testinfra.modules.addr [assertion]
+          found cached rewritten pyc for '/home/user1/.local/lib/python2.7/site-packages/testinfra/modules/addr.py' [assertion]
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> [] [hook]
         pytest_runtest_makereport [hook]
-            item: <Function test_sogo_up[ansible://instance]>
-            call: <CallInfo when='call' exception: assert False
- +  where False = <testinfra.modules.addr._AddrPort object at 0x7f52415ba450>.is_reachable
- +    where <testinfra.modules.addr._AddrPort object at 0x7f52415ba450> = <bound method Addr.port of <addr 172.17.0.3>>(80)
- +      where <bound method Addr.port of <addr 172.17.0.3>> = <addr 172.17.0.3>.port>
-        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='call' outcome='failed'> [hook]
+            item: <Function test_mariadb_port_reachable[ansible://instance]>
+            call: <CallInfo when='call' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_mariadb_port_reachable[ansible://instance]' when='call' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='call' outcome='failed'>
+            report: <TestReport 'tests/test_default.py::test_mariadb_port_reachable[ansible://instance]' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='call' outcome='failed'>
-              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
-          finish pytest_report_teststatus --> ('failed', 'F', 'FAILED') [hook]
+              report: <TestReport 'tests/test_default.py::test_mariadb_port_reachable[ansible://instance]' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
-        pytest_exception_interact [hook]
-            report: <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='call' outcome='failed'>
-            node: <Function test_sogo_up[ansible://instance]>
-            call: <CallInfo when='call' exception: assert False
- +  where False = <testinfra.modules.addr._AddrPort object at 0x7f52415ba450>.is_reachable
- +    where <testinfra.modules.addr._AddrPort object at 0x7f52415ba450> = <bound method Addr.port of <addr 172.17.0.3>>(80)
- +      where <bound method Addr.port of <addr 172.17.0.3>> = <addr 172.17.0.3>.port>
-        finish pytest_exception_interact --> [] [hook]
         pytest_runtest_teardown [hook]
-            item: <Function test_sogo_up[ansible://instance]>
-            nextitem: None
-          pytest_fixture_post_finalizer [hook]
-              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
-              request: <SubRequest 'host' for <Function test_sogo_up[ansible://instance]>>
-          finish pytest_fixture_post_finalizer --> [] [hook]
-          pytest_fixture_post_finalizer [hook]
-              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
-              request: <SubRequest 'host' for <Function test_sogo_up[ansible://instance]>>
-          finish pytest_fixture_post_finalizer --> [] [hook]
-          pytest_fixture_post_finalizer [hook]
-              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
-              request: <SubRequest 'host' for <Function test_mariadb_up[ansible://instance]>>
-          finish pytest_fixture_post_finalizer --> [] [hook]
-          pytest_fixture_post_finalizer [hook]
-              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
-              request: <SubRequest 'host' for <Function test_docker_up[ansible://instance]>>
-          finish pytest_fixture_post_finalizer --> [] [hook]
-          pytest_fixture_post_finalizer [hook]
-              fixturedef: <FixtureDef argname='_testinfra_host' scope=u'module' baseid=''>
-              request: <SubRequest '_testinfra_host' for <Function test_sogo_up[ansible://instance]>>
-          finish pytest_fixture_post_finalizer --> [] [hook]
-          pytest_fixture_post_finalizer [hook]
-              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
-              request: <SubRequest 'host' for <Function test_mariadb_up[ansible://instance]>>
-          finish pytest_fixture_post_finalizer --> [] [hook]
-          pytest_fixture_post_finalizer [hook]
-              fixturedef: <FixtureDef argname='_testinfra_host' scope=u'module' baseid=''>
-              request: <SubRequest '_testinfra_host' for <Function test_mariadb_up[ansible://instance]>>
-          finish pytest_fixture_post_finalizer --> [] [hook]
-          pytest_fixture_post_finalizer [hook]
-              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
-              request: <SubRequest 'host' for <Function test_docker_up[ansible://instance]>>
-          finish pytest_fixture_post_finalizer --> [] [hook]
-          pytest_fixture_post_finalizer [hook]
-              fixturedef: <FixtureDef argname='_testinfra_host' scope=u'module' baseid=''>
-              request: <SubRequest '_testinfra_host' for <Function test_docker_up[ansible://instance]>>
-          finish pytest_fixture_post_finalizer --> [] [hook]
+            item: <Function test_mariadb_port_reachable[ansible://instance]>
+            nextitem: <Function test_sogo_container_up[ansible://instance]>
         finish pytest_runtest_teardown --> [] [hook]
         pytest_runtest_makereport [hook]
-            item: <Function test_sogo_up[ansible://instance]>
+            item: <Function test_mariadb_port_reachable[ansible://instance]>
             call: <CallInfo when='teardown' result: []>
-        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='teardown' outcome='passed'> [hook]
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_mariadb_port_reachable[ansible://instance]' when='teardown' outcome='passed'> [hook]
         pytest_runtest_logreport [hook]
-            report: <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='teardown' outcome='passed'>
+            report: <TestReport 'tests/test_default.py::test_mariadb_port_reachable[ansible://instance]' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
-              report: <TestReport 'tests/test_default.py::test_sogo_up[ansible://instance]' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+              report: <TestReport 'tests/test_default.py::test_mariadb_port_reachable[ansible://instance]' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
-            location: ('tests/test_default.py', 35, 'test_sogo_up[ansible://instance]')
-            nodeid: tests/test_default.py::test_sogo_up[ansible://instance]
+            location: ('tests/test_default.py', 29, 'test_mariadb_port_reachable[ansible://instance]')
+            nodeid: tests/test_default.py::test_mariadb_port_reachable[ansible://instance]
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+      pytest_runtest_protocol [hook]
+          item: <Function test_sogo_container_up[ansible://instance]>
+          nextitem: <Function test_sogo_port_reachable[ansible://instance]>
+        pytest_runtest_logstart [hook]
+            location: ('tests/test_default.py', 43, 'test_sogo_container_up[ansible://instance]')
+            nodeid: tests/test_default.py::test_sogo_container_up[ansible://instance]
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_sogo_container_up[ansible://instance]>
+        finish pytest_runtest_setup --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_sogo_container_up[ansible://instance]>
+            call: <CallInfo when='setup' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_container_up[ansible://instance]' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_sogo_container_up[ansible://instance]' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_sogo_container_up[ansible://instance]' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_sogo_container_up[ansible://instance]>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_sogo_container_up[ansible://instance]>
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_sogo_container_up[ansible://instance]>
+            call: <CallInfo when='call' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_container_up[ansible://instance]' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_sogo_container_up[ansible://instance]' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_sogo_container_up[ansible://instance]' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_sogo_container_up[ansible://instance]>
+            nextitem: <Function test_sogo_port_reachable[ansible://instance]>
+        finish pytest_runtest_teardown --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_sogo_container_up[ansible://instance]>
+            call: <CallInfo when='teardown' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_container_up[ansible://instance]' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_sogo_container_up[ansible://instance]' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_sogo_container_up[ansible://instance]' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            location: ('tests/test_default.py', 43, 'test_sogo_container_up[ansible://instance]')
+            nodeid: tests/test_default.py::test_sogo_container_up[ansible://instance]
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+      pytest_runtest_protocol [hook]
+          item: <Function test_sogo_port_reachable[ansible://instance]>
+          nextitem: None
+        pytest_runtest_logstart [hook]
+            location: ('tests/test_default.py', 49, 'test_sogo_port_reachable[ansible://instance]')
+            nodeid: tests/test_default.py::test_sogo_port_reachable[ansible://instance]
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_sogo_port_reachable[ansible://instance]>
+        finish pytest_runtest_setup --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_sogo_port_reachable[ansible://instance]>
+            call: <CallInfo when='setup' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_port_reachable[ansible://instance]' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_sogo_port_reachable[ansible://instance]' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_sogo_port_reachable[ansible://instance]' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_sogo_port_reachable[ansible://instance]>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_sogo_port_reachable[ansible://instance]>
+          finish pytest_pyfunc_call --> True [hook]
+        finish pytest_runtest_call --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_sogo_port_reachable[ansible://instance]>
+            call: <CallInfo when='call' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_port_reachable[ansible://instance]' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_sogo_port_reachable[ansible://instance]' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_sogo_port_reachable[ansible://instance]' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_sogo_port_reachable[ansible://instance]>
+            nextitem: None
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_sogo_port_reachable[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_sogo_port_reachable[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_sogo_container_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_mariadb_port_reachable[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_mariadb_container_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_sogo_net_created[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_docker_service_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='_testinfra_host' scope=u'module' baseid=''>
+              request: <SubRequest '_testinfra_host' for <Function test_sogo_port_reachable[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_sogo_container_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='_testinfra_host' scope=u'module' baseid=''>
+              request: <SubRequest '_testinfra_host' for <Function test_sogo_container_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_mariadb_port_reachable[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='_testinfra_host' scope=u'module' baseid=''>
+              request: <SubRequest '_testinfra_host' for <Function test_mariadb_port_reachable[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_mariadb_container_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='_testinfra_host' scope=u'module' baseid=''>
+              request: <SubRequest '_testinfra_host' for <Function test_mariadb_container_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_sogo_net_created[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='_testinfra_host' scope=u'module' baseid=''>
+              request: <SubRequest '_testinfra_host' for <Function test_sogo_net_created[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='host' scope=u'module' baseid=''>
+              request: <SubRequest 'host' for <Function test_docker_service_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='_testinfra_host' scope=u'module' baseid=''>
+              request: <SubRequest '_testinfra_host' for <Function test_docker_service_up[ansible://instance]>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+        finish pytest_runtest_teardown --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_sogo_port_reachable[ansible://instance]>
+            call: <CallInfo when='teardown' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/test_default.py::test_sogo_port_reachable[ansible://instance]' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/test_default.py::test_sogo_port_reachable[ansible://instance]' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/test_default.py::test_sogo_port_reachable[ansible://instance]' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x7f2f1ec955d0>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            location: ('tests/test_default.py', 49, 'test_sogo_port_reachable[ansible://instance]')
+            nodeid: tests/test_default.py::test_sogo_port_reachable[ansible://instance]
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
     finish pytest_runtestloop --> True [hook]
     pytest_sessionfinish [hook]
-        session: <Session default exitstatus=1 testsfailed=2 testscollected=3>
-        exitstatus: 1
+        session: <Session default exitstatus=0 testsfailed=0 testscollected=6>
+        exitstatus: 0
       pytest_terminal_summary [hook]
-          config: <_pytest.config.Config object at 0x7f5241c2c5d0>
-          exitstatus: 1
-          terminalreporter: <_pytest.terminal.TerminalReporter object at 0x7f5241a959d0>
+          config: <_pytest.config.Config object at 0x7f2f1ec955d0>
+          exitstatus: 0
+          terminalreporter: <_pytest.terminal.TerminalReporter object at 0x7f2f1eafd9d0>
       finish pytest_terminal_summary --> [] [hook]
     finish pytest_sessionfinish --> [] [hook]
     pytest_unconfigure [hook]
-        config: <_pytest.config.Config object at 0x7f5241c2c5d0>
+        config: <_pytest.config.Config object at 0x7f2f1ec955d0>
     finish pytest_unconfigure --> [] [hook]

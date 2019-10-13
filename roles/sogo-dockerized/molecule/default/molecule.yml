@@ -12,18 +12,22 @@ driver:
     options:
       memory: 1536
       cpus: 2
+
 lint:
   name: yamllint
+
 platforms:
   - name: instance
     box: generic/ubuntu1804
     provider_raw_config_args:
       - 'cpu_mode = "custom"'
       - 'cpu_model = "qemu64"'
+
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
+
 verifier:
   name: testinfra
   lint:
