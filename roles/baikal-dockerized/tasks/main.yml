@@ -1,0 +1,27 @@
+---
+- name: create_docker_network_internal_baikal
+  docker_network:
+    name: internal_baikal
+    attachable: true
+    ipam_config:
+      - subnet: "{{ net_internal_baikal_subnet }}"
+    driver_options:
+      com.docker.network.baikal.enable_icc: true
+
+- name: create_baikal_data_volume
+  docker_volume:
+    name: "{{ baikal_host }}_data"
+
+- name: create_baikal_container
+  docker_container:
+    name: "{{ baikal_host }}"
+    image: "{{ baikal_image }}"
+    restart_policy: always
+    hostname: "{{ baikal_host }}"
+    volumes: "{{ baikal_host }}_data:/var/www/baikal/Specific/"
+    networks:
+      - name: internal_baikal
+        ipv4_address: "{{ baikal_ip }}"
+        aliases: "{{ baikal_host }}"
+    networks_cli_compatible: yes  # hide deprecation warning
+    network_mode: "internal_baikal"  # hide deprecation warning

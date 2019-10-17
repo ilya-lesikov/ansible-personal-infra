@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/linux,vim,python,ansible
 # Edit at https://www.gitignore.io/?templates=linux,vim,python,ansible
 
@@ -145,3 +144,15 @@ tags
 [._]*.un~
 
 # End of https://www.gitignore.io/api/linux,vim,python,ansible
+
+# Created by https://www.gitignore.io/api/testinfra
+# Edit at https://www.gitignore.io/?templates=testinfra
+
+### Testinfra ###
+__pycache__/
+.pytest_cache/
+
+# End of https://www.gitignore.io/api/testinfra
+
+*.log
+.env.yml

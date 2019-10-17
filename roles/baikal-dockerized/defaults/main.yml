@@ -1,0 +1,6 @@
+---
+net_internal_baikal_subnet: 172.10.71.0/24
+
+baikal_host: baikal
+baikal_image: ckulka/baikal:0.5.3-nginx
+baikal_ip: 172.10.71.3

@@ -1,0 +1,17 @@
+---
+traefik_image: traefik:v2.0
+
+traefik_host: traefik
+traefik_net_external_isolated_subnet: 172.10.70.0/24
+traefik_net_external_isolated_ip: 172.10.70.2
+traefik_host_http_port: 80
+traefik_host_https_port: 443
+traefik_host_api_port: 8080
+
+traefik_confdir_host: /config/traefik
+
+traefik_api_auth_user: admin
+# default pass: CHANGEME. Generate new hash with `htdigest`
+traefik_api_auth_hash: bfd5f4c74bc7047108bc3f6c91b3f4fa
+
+traefik_acme_caserver: https://acme-staging-v02.api.letsencrypt.org/directory

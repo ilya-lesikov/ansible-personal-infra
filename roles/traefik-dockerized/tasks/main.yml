@@ -1,0 +1,61 @@
+---
+- name: cloudflare_api_creds_set
+  assert:
+    that:
+      - cloudflare_api_email is defined
+      - cloudflare_api_key is defined
+
+- name: create_docker_network_external_isolated_traefik
+  docker_network:
+    name: external_isolated_traefik
+    attachable: true
+    ipam_config:
+      - subnet: "{{ traefik_net_external_isolated_subnet }}"
+    driver_options:
+      com.docker.network.traefik.enable_icc: false
+      com.docker.network.bridge.host_binding_ipv4: 0.0.0.0
+
+- name: create_traefik_data_volume
+  docker_volume:
+    name: "{{ traefik_data_volume }}"
+
+- name: copy_config_files
+  template:
+    src: service-api.yml.j2
+    dest: /config/traefik/
+    mode: 0660
+
+- name: create_traefik_container
+  docker_container:
+    name: "{{ traefik_host }}"
+    image: "{{ traefik_image }}"
+    restart_policy: always
+    hostname: "{{ traefik_host }}"
+    published_ports:
+      - "{{ traefik_host_http_port }}:80"
+      - "{{ traefik_host_https_port }}:443"
+      - "127.0.0.1:{{ traefik_host_api_port }}:8080"
+    volumes:
+      - "{{ traefik_data_volume }}:{{ traefik_data_mount }}"
+      - "{{ traefik_confdir_host }}:{{ traefik_confdir_mount }}"
+    command:
+      - "--entrypoints.http.address=':80'"
+      - "--entrypoints.https.address=':443'"
+      - "--entrypoints.api.address=':8080'"
+      - "--providers.file.filename={{ traefik_confdir_mount }}/{{ traefik_api_config }}"
+      - "--certificatesresolvers.cloudflare.acme.dnschallenge.provider=cloudflare"
+      - "--certificatesresolvers.cloudflare.acme.dnschallenge.resolvers='1.1.1.1:53'"
+      - "--certificatesresolvers.cloudflare.acme.dnschallenge.delayBeforeCheck=180"
+      - "--certificatesresolvers.cloudflare.acme.storage={{ traefik_data_mount }}/acme.json"
+      - "--certificatesresolvers.cloudflare.acme.email={{ cloudflare_api_email }}"
+      - "--certificatesresolvers.cloudflare.acme.caserver='{{ traefik_acme_caserver }}'"
+      - "--api=true"
+    networks:
+      - name: external_isolated_traefik
+        ipv4_address: "{{ traefik_net_external_isolated_ip }}"
+        aliases: "{{ traefik_host }}"
+    networks_cli_compatible: yes  # hide deprecation warning
+    network_mode: "external_isolated_traefik"  # hide deprecation warning
+  environment:
+    CF_API_EMAIL: "{{ cloudflare_api_email }}"
+    CF_API_KEY: "{{ cloudflare_api_key }}"
