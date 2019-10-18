@@ -10,8 +10,8 @@ driver:
     name: libvirt
     type: libvirt
     options:
-      memory: 1024
-      cpus: 2
+      memory: 1536
+      cpus: 4
 
 lint:
   name: yamllint

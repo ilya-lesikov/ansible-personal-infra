@@ -8,6 +8,11 @@ traefik_host_http_port: 80
 traefik_host_https_port: 443
 traefik_host_api_port: 8080
 
+# format as in `docker_container` module, `networks:` parameter
+traefik_extra_nets: []
+  # - name: othernet
+  #   ipv4_address: 127.0.0.99
+
 traefik_confdir_host: /config/traefik
 
 traefik_api_auth_user: admin
@@ -15,3 +20,11 @@ traefik_api_auth_user: admin
 traefik_api_auth_hash: bfd5f4c74bc7047108bc3f6c91b3f4fa
 
 traefik_acme_caserver: https://acme-staging-v02.api.letsencrypt.org/directory
+
+traefik_services:
+  - name: service1
+    http: true
+    https: true
+    http_to_https: true
+    url: http://172.10.71.3:80
+    rule: "Host(`service1.example.org`)"

@@ -12,4 +12,4 @@ http:
     api_auth:
       digestAuth:
         users:
-          - "admin:traefik:bfd5f4c74bc7047108bc3f6c91b3f4fa"
+          - "{{ traefik_api_auth_user }}:traefik:{{ traefik_api_auth_hash }}"

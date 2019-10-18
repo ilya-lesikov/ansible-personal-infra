@@ -44,8 +44,8 @@ def test_traefik_api_reachable(host):
     for retry in retries:
         try:
             assert host.run_test('curl -sS -k --digest --user admin:CHANGEME'
-                                 'http://172.10.70.2:8080/api/rawdata'
-                                 '| grep -F "api@internal"')
+                                 ' http://172.10.70.2:8080/api/rawdata'
+                                 ' | grep -F "api@internal"')
         except AssertionError:
             if retry == retries[-1]:
                 raise
@@ -53,3 +53,25 @@ def test_traefik_api_reachable(host):
                 time.sleep(1)
                 continue
         break
+
+
+def test_traefik_service1_added(host):
+    retries = range(20)
+    for retry in retries:
+        try:
+            cmd = host.run('curl -sS -k --digest --user admin:CHANGEME'
+                           ' http://172.10.70.2:8080/api/rawdata')
+            assert cmd.rc == 0
+        except AssertionError:
+            if retry == retries[-1]:
+                raise
+            else:
+                time.sleep(1)
+                continue
+        break
+
+    assert '"http-service1@file"' in cmd.stdout
+    assert '"https-service1@file"' in cmd.stdout
+    assert '"http-to-https@file"' in cmd.stdout
+    assert '"rule":"Host(`service1.example.org`)"' in cmd.stdout
+    assert '"url":"http://172.10.71.3:80"' in cmd.stdout

@@ -1,0 +1,36 @@
+http:
+  routers:
+    {% if item.http -%}
+    http-{{ item.name }}:
+      entryPoints:
+        - http
+      rule: "{{ item.rule }}"
+      service: {{ item.name }}
+      middlewares:
+        {% if item.http_to_https and item.https -%}
+        - http-to-https
+        {% endif %}
+    {% endif %}
+
+    {% if item.https -%}
+    https-{{ item.name }}:
+      entryPoints:
+        - https
+      rule: "{{ item.rule }}"
+      service: {{ item.name }}
+      tls:
+        certresolver: cloudflare
+    {% endif %}
+
+  services:
+    {{ item.name }}:
+      loadBalancer:
+        servers:
+          - url: "{{ item.url }}"
+
+  middlewares:
+    {% if item.http_to_https and item.https -%}
+    http-to-https:
+      redirectScheme:
+        scheme: https
+    {% endif %}

@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Ilya Lesikov
-  description: Deploy traefik caldav/carddav server with Docker
+  description: Deploy Traefik with Docker
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value

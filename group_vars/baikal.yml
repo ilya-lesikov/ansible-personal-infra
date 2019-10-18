@@ -1,0 +1,17 @@
+baikal_net_internal_subnet: 172.20.71.0/24
+baikal_ip: 172.20.71.3
+
+traefik_net_external_isolated_subnet: 172.20.70.0/24
+traefik_net_external_isolated_ip: 172.20.70.2
+traefik_extra_nets:
+  - name: "{{ baikal_net_name }}"
+
+traefik_api_auth_hash: SECRET_CLEANED_UP
+
+traefik_services:
+  - name: baikal
+    http: true
+    https: true
+    http_to_https: true
+    url: "http://{{ baikail_ip }}:80"
+    rule: "Host(`staging.baikal.lesikov.com`)"

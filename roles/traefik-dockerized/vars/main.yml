@@ -1,5 +1,10 @@
 ---
 traefik_confdir_mount: /config/traefik
 traefik_api_config: service-api.yml
-traefik_data_volume: "{{ traefik_host }}_data"
+traefik_data_volume: traefik_data
 traefik_data_mount: /data/traefik
+
+traefik_default_nets:
+  - name: external_isolated_traefik
+    ipv4_address: "{{ traefik_net_external_isolated_ip }}"
+    aliases: "{{ traefik_host }}"
