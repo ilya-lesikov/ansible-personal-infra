@@ -53,6 +53,7 @@
       - "{{ traefik_confdir_host }}:{{ traefik_confdir_mount }}"
     command:
       - "--providers.file.directory={{ traefik_confdir_mount }}"
+      - "--providers.file.watch=true"
       - "--entrypoints.http.address=':80'"
       - "--entrypoints.https.address=':443'"
       - "--entrypoints.api.address=':8080'"

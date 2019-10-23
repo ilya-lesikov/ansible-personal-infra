@@ -154,5 +154,21 @@ __pycache__/
 
 # End of https://www.gitignore.io/api/testinfra
 
+# Created by https://www.gitignore.io/api/vagrant
+# Edit at https://www.gitignore.io/?templates=vagrant
+
+### Vagrant ###
+# General
+.vagrant/
+
+# Log files (if you are creating logs in debug mode, uncomment this)
+# *.log
+
+### Vagrant Patch ###
+*.box
+
+# End of https://www.gitignore.io/api/vagrant
+
 *.log
 .env.yml
+

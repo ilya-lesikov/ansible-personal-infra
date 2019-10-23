@@ -6,7 +6,7 @@ traefik_net_external_isolated_ip: 172.20.70.2
 traefik_extra_nets:
   - name: "{{ baikal_net_name }}"
 
-traefik_api_auth_hash: SECRET_CLEANED_UP
+# traefik_api_auth_hash: SECRET_CLEANED_UP
 
 traefik_services:
   - name: baikal
