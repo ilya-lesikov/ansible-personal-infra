@@ -1,6 +1,8 @@
 ---
-- hosts: home-server1-staging
+- hosts: baikal
+  become: true
   roles:
+    - geerlingguy.docker
     - baikal-dockerized
     - traefik-dockerized
   # vars:

@@ -28,7 +28,7 @@ def web_login(request):
     url = urljoin(opts.baikal_baseurl, '/admin/')
     data = {'auth': '1', 'login': opts.baikal_user, 'password': opts.baikal_pass}
     with requests.Session() as session:
-        resp = session.post(url, data=data)
+        resp = session.post(url, data=data, verify=False)
         yield session, resp
 
 
@@ -38,7 +38,8 @@ def dav_login(request):
 
     url = urljoin(opts.baikal_baseurl, '/dav.php/')
     client = caldav.DAVClient(
-        url, username=opts.baikal_dav_user, password=opts.baikal_dav_pass
+        url, username=opts.baikal_dav_user, password=opts.baikal_dav_pass,
+        ssl_verify_cert=False
     )
     return client
 
@@ -54,7 +55,7 @@ def test_web_create_user(request, web_login):
 
     session, _ = web_login
     url = urljoin(opts.baikal_baseurl, '/admin/?/users/new/1/')
-    resp_get = session.get(url)
+    resp_get = session.get(url, verify=False)
     html_get = HTML(html=resp_get.content)
     csrf_token = html_get.find('input[name=CSRF_TOKEN]', first=True).attrs['value']
     assert csrf_token
@@ -74,7 +75,7 @@ def test_web_create_user(request, web_login):
         'data[passwordconfirm]': opts.baikal_dav_pass,
         'witness[passwordconfirm]': '1'
     }
-    resp_post = session.post(url, data)
+    resp_post = session.post(url, data, verify=False)
     html_post = HTML(html=resp_post.content)
     notification = html_post.find('#message', first=True).text
     assert notification == f'User {opts.baikal_dav_user} has been created.'
