@@ -8,20 +8,104 @@
     driver_options:
       com.docker.network.baikal.enable_icc: true
 
+- name: create_baikal_build_dir
+  file:
+    state: directory
+    path: "{{ baikal_build_dir }}"
+    mode: 0755
+
+- name: template_baikal_config_php
+  template:
+    src: config.php.j2
+    dest: "{{ baikal_build_dir }}/config.php"
+    mode: 0600
+
+- name: template_baikal_config_system_php
+  template:
+    src: config.system.php.j2
+    dest: "{{ baikal_build_dir }}/config.system.php"
+    mode: 0600
+
+- name: copy_baikal_db_creation_script
+  copy:
+    src: create_db.sql
+    dest: "{{ baikal_build_dir }}/"
+    mode: 0600
+
+- name: copy_baikal_dockerfile
+  copy:
+    src: Dockerfile
+    dest: "{{ baikal_build_dir }}/"
+    mode: 0600
+
+- name: touch_baikal_install_disabled_file
+  copy:
+    content: ''
+    dest: "{{ baikal_build_dir }}/INSTALL_DISABLED"
+    mode: 0600
+
+- name: build_baikal_image
+  docker_image:
+    name: "{{ baikal_local_image }}"
+    build:
+      path: "{{ baikal_build_dir }}"
+      args:
+        image: "{{ baikal_image }}"
+        conf_dir: "{{ baikal_conf_dir }}"
+    source: build
+
 - name: create_baikal_data_volume
   docker_volume:
-    name: "{{ baikal_host }}_data"
+    name: "{{ baikal_volume_data_name }}"
+
+# - name: create_db_dir
+#   file:
+#     state: directory
+#     path: "{{ docker_volumes_dir }}/{{ baikal_volume_data_name }}\
+#            /_data/db"
+#     owner: "{{ baikal_volume_data_uid }}"
+#     group: "{{ baikal_volume_data_gid }}"
+#     mode: 0755
+
+# - name: is_db_exists
+#   shell: "test -f '{{ docker_volumes_dir }}/{{ baikal_volume_data_name }}\
+#           /_data/db/db.sqlite'"
+#   register: is_db_exists
+#   ignore_errors: true
+#   changed_when: false
+
+# - name: create_db
+#   shell: "docker exec {{ baikal_host }} bash -c '\
+#           sqlite3 \"{{ docker_volumes_dir }}/{{ baikal_volume_data_name }}\
+#           /_data/db/db.sqlite\"\
+#           < \"{{ docker_volumes_dir }}/{{ baikal_volume_data_name }}\
+#           /_data/create_db.sql\"'"
+#   args:
+#     creates: "{{ docker_volumes_dir }}/{{ baikal_volume_data_name }}\
+#               /_data/db/db.sqlite"
 
 - name: create_baikal_container
   docker_container:
     name: "{{ baikal_host }}"
-    image: "{{ baikal_image }}"
+    image: "{{ baikal_local_image }}"
     restart_policy: always
     hostname: "{{ baikal_host }}"
-    volumes: "{{ baikal_host }}_data:/var/www/baikal/Specific/"
+    volumes: "{{ baikal_volume_data_name }}:{{ baikal_conf_dir }}/db"
     networks:
       - name: "{{ baikal_net_name }}"
         ipv4_address: "{{ baikal_ip }}"
         aliases: "{{ baikal_host }}"
     networks_cli_compatible: true  # hide deprecation warning
     network_mode: "{{ baikal_net_name }}"  # hide deprecation warning
+
+- name: create_baikal_db
+  shell: |
+    docker exec {{ baikal_host }} bash -c '\
+      sqlite3 "{{ baikal_conf_dir }}/db/db.sqlite"\
+      < "{{ baikal_conf_dir }}/create_db.sql"\
+      && chown 101:101 "{{ baikal_conf_dir }}/db/db.sqlite"\
+      && chmod 600 "{{ baikal_conf_dir }}/db/db.sqlite"\
+      '
+  args:
+    creates: "{{ docker_volumes_dir }}/{{ baikal_volume_data_name }}\
+              /_data/db.sqlite"

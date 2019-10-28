@@ -1,12 +1,11 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-
 Vagrant.configure('2') do |config|
   baikal_domain = 'staging.baikal.lesikov.com'
 
-  config.vagrant.plugins = [
-    'vagrant-hostsupdater', 'vagrant-host-shell', 'vagrant-hosts'
+  config.vagrant.plugins = %w[
+    vagrant-hostsupdater vagrant-host-shell vagrant-hosts
   ]
 
   config.vm.define 'ub1804' do |ub1804|
@@ -32,21 +31,21 @@ Vagrant.configure('2') do |config|
 
     # make ubuntu use standard dns-server on the gateway instead of some shitty
     # 3rd-party ones that hardcoded into image
-		ub1804.vm.provision 'shell', inline: <<-EOF
+    ub1804.vm.provision 'shell', inline: <<-SCRIPT
       sudo add-apt-repository ppa:rmescandon/yq
       sudo apt-get install yq -y
       yq delete -i /etc/netplan/01-netcfg.yaml network.ethernets.eth0.nameservers
       sudo netplan apply
-			EOF
+    SCRIPT
 
-    ub1804.vm.provision 'shell', inline: <<-EOF
+    ub1804.vm.provision 'shell', inline: <<-SCRIPT
       sudo apt-get install -y python-minimal python-docker
-      EOF
+    SCRIPT
 
     ub1804.vm.provision 'ansible' do |ansible|
       ansible.extra_vars = {
         cloudflare_api_email: ENV['CF_API_EMAIL'],
-        cloudflare_api_key: ENV['CF_API_KEY'],
+        cloudflare_api_key: ENV['CF_API_KEY']
       }
       ansible.playbook = 'home-server1.yml'
       ansible.inventory_path = 'environments/staging'
@@ -55,13 +54,12 @@ Vagrant.configure('2') do |config|
     end
 
     ub1804.vm.provision 'host_shell' do |host_shell|
-      host_shell.inline = <<-EOF
+      host_shell.inline = <<-SCRIPT
         cd test/smoke/pytest
         pytest -x --color=yes --tb=line \
           --baikal-baseurl='https://#{baikal_domain}/'
-        EOF
+      SCRIPT
     end
-
   end
 end
 

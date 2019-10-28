@@ -30,5 +30,11 @@ provisioner:
 
 verifier:
   name: testinfra
+  options:
+    # breakpoints in tests do not work without this
+    # capture: "no"
+    # pdb: true
+    # pdbcls: 'IPython.terminal.debugger:TerminalPdb'
+    no-flaky-report: true
   lint:
     name: flake8

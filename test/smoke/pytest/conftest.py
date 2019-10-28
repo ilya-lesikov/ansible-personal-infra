@@ -17,7 +17,6 @@ def pytest_addoption(parser):
     for opt, default in OPTS.items():
         parser.addoption(f'--{opt.replace("_", "-")}', action="store", default=default)
 
-
 def pytest_generate_tests(metafunc):
     # This is called for every test. Only get/set command line arguments
     # if the argument is specified in the list of test "fixturenames".
