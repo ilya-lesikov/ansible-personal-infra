@@ -1,5 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+# frozen_string_literal: true
 
 Vagrant.configure('2') do |config|
   baikal_domain = 'staging.baikal.lesikov.com'
@@ -10,11 +11,8 @@ Vagrant.configure('2') do |config|
 
   config.vm.define 'ub1804' do |ub1804|
     ub1804.vm.box = 'generic/ubuntu1804'
-
-    # ub1804.ssh.username = 'vagrant'
-    # ub1804.ssh.password = 'vagrant'
-
     ub1804.vm.hostname = 'home-server1-staging'
+    # update /etc/hosts on host
     ub1804.hostsupdater.aliases = [baikal_domain]
     ub1804.vm.network 'private_network', ip: '10.20.30.2'
 
@@ -25,12 +23,13 @@ Vagrant.configure('2') do |config|
       libvirt.cpu_model = 'qemu64'
     end
 
+    # update /etc/hosts on guest
     ub1804.vm.provision 'hosts' do |provisioner|
       provisioner.add_host '127.0.90.1', [baikal_domain]
     end
 
     # make ubuntu use standard dns-server on the gateway instead of some shitty
-    # 3rd-party ones that hardcoded into image
+    # 3rd-party ones hardcoded into image
     ub1804.vm.provision 'shell', inline: <<-SCRIPT
       sudo add-apt-repository ppa:rmescandon/yq
       sudo apt-get install yq -y
@@ -39,7 +38,7 @@ Vagrant.configure('2') do |config|
     SCRIPT
 
     ub1804.vm.provision 'shell', inline: <<-SCRIPT
-      sudo apt-get install -y python-minimal python-docker
+      sudo apt-get install -y python3-minimal python3-docker
     SCRIPT
 
     ub1804.vm.provision 'ansible' do |ansible|
@@ -57,12 +56,10 @@ Vagrant.configure('2') do |config|
       host_shell.inline = <<-SCRIPT
         cd test/smoke/pytest
         pytest -x --color=yes --tb=line \
-          --baikal-baseurl='https://#{baikal_domain}/'
+          --baikal-baseurl='https://#{baikal_domain}/' \
+          --baikal-user='admin' \
+          --baikal-pass='CHANGEME'
       SCRIPT
     end
   end
 end
-
-# out = `cd test/smoke/pytest &&\
-#   pytest --color=yes -x --tb=line --baikal-baseurl='https://#{baikal_domain}/' 2>&1`
-# $?.success? ? out : abort(out + "\nPYTEST FAILED")

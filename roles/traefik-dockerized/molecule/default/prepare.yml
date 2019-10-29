@@ -4,6 +4,6 @@
   gather_facts: false
   tasks:
     - name: Install python for Ansible
-      raw: apt -y update && apt install -y python-minimal python-docker
+      raw: apt -y update && apt install -y python3-minimal python3-docker
       become: true
       changed_when: false

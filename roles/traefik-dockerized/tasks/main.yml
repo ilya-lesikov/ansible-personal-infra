@@ -1,5 +1,5 @@
 ---
-- name: cloudflare_api_creds_set
+- name: cloudflare_api_creds_should_be_set
   assert:
     that:
       - cloudflare_api_email is defined

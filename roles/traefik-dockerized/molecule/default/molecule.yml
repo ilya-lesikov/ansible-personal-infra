@@ -34,5 +34,7 @@ provisioner:
 
 verifier:
   name: testinfra
+  options:
+    no-flaky-report: true
   lint:
     name: flake8

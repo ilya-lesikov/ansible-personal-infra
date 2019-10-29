@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-import pytest
-import requests
+from requests import Session
+from requests.compat import urljoin
 from requests_html import HTML
-from urllib.parse import urljoin
+import pytest
 import caldav
 
 VCAL_UID = '0000000008'
@@ -27,7 +27,7 @@ def web_login(request):
 
     url = urljoin(opts.baikal_baseurl, '/admin/')
     data = {'auth': '1', 'login': opts.baikal_user, 'password': opts.baikal_pass}
-    with requests.Session() as session:
+    with Session() as session:
         resp = session.post(url, data=data, verify=False)
         yield session, resp
 

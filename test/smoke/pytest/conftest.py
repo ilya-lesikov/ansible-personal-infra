@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from urllib3 import disable_warnings
+
 from faker import Faker
 
 
@@ -13,9 +15,14 @@ OPTS = {
 }
 
 
+def pytest_sessionstart(session):
+    disable_warnings()
+
+
 def pytest_addoption(parser):
     for opt, default in OPTS.items():
         parser.addoption(f'--{opt.replace("_", "-")}', action="store", default=default)
+
 
 def pytest_generate_tests(metafunc):
     # This is called for every test. Only get/set command line arguments
