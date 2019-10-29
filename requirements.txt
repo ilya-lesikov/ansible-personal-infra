@@ -1,1 +1,7 @@
 flaky==3.6.1
+caldav==0.6.1
+pytest==5.2.2
+requests==2.22.0
+requests-html==0.10.0
+requests-unixsocket==0.1.5
+molecule[vagrant]==2.22
