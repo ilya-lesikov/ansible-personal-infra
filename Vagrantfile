@@ -37,21 +37,19 @@ Vagrant.configure('2') do |config|
       sudo netplan apply
     SCRIPT
 
+    # install python to run ansible
     ub1804.vm.provision 'shell', inline: <<-SCRIPT
-      sudo apt-get install -y python3-minimal python3-docker
+      sudo apt-get install -y python3-minimal
     SCRIPT
 
+    # provision with ansible
     ub1804.vm.provision 'ansible' do |ansible|
-      ansible.extra_vars = {
-        cloudflare_api_email: ENV['CF_API_EMAIL'],
-        cloudflare_api_key: ENV['CF_API_KEY']
-      }
       ansible.playbook = 'home-server1.yml'
       ansible.inventory_path = 'environments/staging'
-      # ansible.verbose = 'vvvv'
       ansible.limit = 'all'
     end
 
+    # perform infra-wide smoke testing
     ub1804.vm.provision 'host_shell' do |host_shell|
       host_shell.inline = <<-SCRIPT
         cd test/smoke/pytest

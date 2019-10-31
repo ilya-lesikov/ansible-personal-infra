@@ -1,6 +1,13 @@
 ---
+ansible_python_interpreter: /usr/bin/env python3
+
+pip_package: python3-pip
+pip_install_packages:
+  - name: docker
+
 baikal_net_internal_subnet: 172.20.71.0/24
 baikal_ip: 172.20.71.3
+baikal_force_https: true
 
 traefik_net_external_isolated_subnet: 172.20.70.0/24
 traefik_net_external_isolated_ip: 172.20.70.2
@@ -11,6 +18,6 @@ traefik_services:
   - name: baikal
     http: true
     https: true
-    http_to_https: true
+    http_to_https: "{{ baikal_force_https | bool }}"
     url: "http://{{ baikal_ip }}:80"
     rule: "Host(`{{ baikal_domain }}`)"

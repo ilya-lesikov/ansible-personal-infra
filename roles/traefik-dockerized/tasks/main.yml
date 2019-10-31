@@ -70,9 +70,10 @@
       - "--certificatesresolvers.cloudflare.acme.caserver\
         ='{{ traefik_acme_caserver }}'"
       - "--api=true"
+      - "--log.level={{ traefik_log_level }}"
     networks: "{{ traefik_default_nets | union(traefik_extra_nets) }}"
     networks_cli_compatible: true  # hide deprecation warning
     network_mode: "external_isolated_traefik"  # hide deprecation warning
-  environment:
-    CF_API_EMAIL: "{{ cloudflare_api_email }}"
-    CF_API_KEY: "{{ cloudflare_api_key }}"
+    env:
+      CF_API_EMAIL: "{{ cloudflare_api_email }}"
+      CF_API_KEY: "{{ cloudflare_api_key }}"

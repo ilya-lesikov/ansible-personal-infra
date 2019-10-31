@@ -49,6 +49,5 @@ def test_traefik_service1_added(host):
 
     assert '"http-service1@file"' in out
     assert '"https-service1@file"' in out
-    assert '"http-to-https@file"' in out
     assert '"rule":"Host(`service1.example.org`)"' in out
     assert '"url":"http://172.10.71.3:80"' in out

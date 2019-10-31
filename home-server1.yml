@@ -2,6 +2,7 @@
 - hosts: baikal
   become: true
   roles:
+    - geerlingguy.pip
     - geerlingguy.docker
     - baikal-dockerized
     - traefik-dockerized

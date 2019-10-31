@@ -7,7 +7,6 @@ baikal_tz: Europe/Moscow
 baikal_admin_pass_hash: dcf89f995880d96080b4c657e078128f
 # A random 32 bytes key that will be used to encrypt data
 # Generate new one with: `hexdump -n 16 -e '4/4 "%08X" 1 "\n"' /dev/random`
-# FIXME: this should be encrypted with ansible vault
 baikal_encryption_key: 5C3839662F9F0CA6A306C2D046CAC6C9
 baikal_volume_data_uid: 101
 baikal_volume_data_gid: 101

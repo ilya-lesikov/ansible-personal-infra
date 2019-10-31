@@ -19,7 +19,7 @@ http:
       rule: "{{ item.rule }}"
       service: {{ item.name }}
       tls:
-        certresolver: cloudflare
+        certResolver: cloudflare
     {% endif %}
 
   services:

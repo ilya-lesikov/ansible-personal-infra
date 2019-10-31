@@ -2,7 +2,7 @@
 
 Automation of personal infrastructure
 
-## Usage
+## Prepare
 
 ```bash
 pip3 install --user ansible
@@ -14,17 +14,25 @@ pip3 install --user requirements.txt
 find roles/ -name "requirements.y*ml" -exec ansible-galaxy install -r '{}' \;
 ```
 
+To decrypt secrets in this repo point environment variable `$ANSIBLE_VAULT_PASSWORD_FILE` to the file containing the password used to encrypt your secrets files. This file will be automatically used by `ansible-playbook` runs for decryption of secrets.
+
 ## Role smoke testing
 
 ```bash
-cd role/role_name
+cd role/$ROLE_NAME
 # check out for additional instructions in role's README
 less README
 molecule test
 ```
 
-## Staging env smoke testing
+## Deploying to staging and running environment-wide smoke tests
 
 ```bash
 vagrant up
+```
+
+## Deploy to prod
+
+```bash
+ansible-playbook $PLAYBOOK_NAME
 ```

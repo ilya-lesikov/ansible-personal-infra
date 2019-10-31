@@ -31,6 +31,7 @@ provisioner:
     extra-vars:
       cloudflare_api_email: "$CLOUDFLARE_API_EMAIL"
       cloudflare_api_key: "$CLOUDFLARE_API_KEY"
+      traefik_log_level: DEBUG
 
 verifier:
   name: testinfra
