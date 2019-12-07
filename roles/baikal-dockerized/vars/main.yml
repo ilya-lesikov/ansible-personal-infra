@@ -1,5 +1,5 @@
 ---
 baikal_conf_dir: /var/www/baikal/Specific
 baikal_volume_data_name: "{{ baikal_host }}_data"
-baikal_build_dir: /tmp/baikal_build
+baikal_build_dir: /var/tmp/baikal_build
 baikal_local_image: local/baikal_docker:latest

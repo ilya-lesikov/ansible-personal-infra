@@ -34,5 +34,5 @@ vagrant up
 ## Deploy to prod
 
 ```bash
-ansible-playbook $PLAYBOOK_NAME
+ansible-playbook -i environments/prod $PLAYBOOK_NAME
 ```

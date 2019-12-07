@@ -21,20 +21,20 @@
 
 - name: make_config_dir
   file:
-    path: "{{ traefik_confdir_mount }}"
+    path: "{{ traefik_confdir_host }}"
     state: directory
     mode: 0755
 
 - name: template_api
   template:
     src: "{{ traefik_api_config }}.j2"
-    dest: "{{ traefik_confdir_mount }}/{{ traefik_api_config }}"
+    dest: "{{ traefik_confdir_host }}/{{ traefik_api_config }}"
     mode: 0660
 
 - name: template_services
   template:
     src: "service-generic.yml.j2"
-    dest: "{{ traefik_confdir_mount }}/service-{{ item.name }}.yml"
+    dest: "{{ traefik_confdir_host }}/service-{{ item.name }}.yml"
     mode: 0660
   loop: "{{ traefik_services }}"
 

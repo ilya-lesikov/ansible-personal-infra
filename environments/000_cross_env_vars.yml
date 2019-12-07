@@ -13,11 +13,3 @@ traefik_net_external_isolated_subnet: 172.20.70.0/24
 traefik_net_external_isolated_ip: 172.20.70.2
 traefik_extra_nets:
   - name: "{{ baikal_net_name }}"
-
-traefik_services:
-  - name: baikal
-    http: true
-    https: true
-    http_to_https: "{{ baikal_force_https | bool }}"
-    url: "http://{{ baikal_ip }}:80"
-    rule: "Host(`{{ baikal_domain }}`)"
