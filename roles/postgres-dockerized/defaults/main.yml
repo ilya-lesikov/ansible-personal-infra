@@ -1,0 +1,20 @@
+---
+pg_image: postgres:12.1
+
+pg_admin_user: postgres
+pg_admin_pass: CHANGEME
+pg_confdir_host: /config/postgres
+pg_shm_size: 256M
+
+pg_host: postgres
+pg_ip: 172.10.72.3
+pg_net_internal_subnet: 172.10.72.0/24
+pg_net_name: internal_postgres
+
+pg_users:
+  - name: user1
+    password: CHANGEME
+
+pg_dbs:
+  - name: user1_db
+    owner: user1

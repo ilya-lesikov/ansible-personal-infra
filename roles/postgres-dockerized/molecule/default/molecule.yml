@@ -1,0 +1,36 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+
+driver:
+  name: vagrant
+  provider:
+    name: libvirt
+    type: libvirt
+    options:
+      memory: 1536
+      cpus: 4
+
+lint:
+  name: yamllint
+
+platforms:
+  - name: instance
+    box: generic/ubuntu1804
+    provider_raw_config_args:
+      - 'cpu_mode = "custom"'
+      - 'cpu_model = "qemu64"'
+
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+
+verifier:
+  name: testinfra
+  options:
+    no-flaky-report: true
+  lint:
+    name: flake8

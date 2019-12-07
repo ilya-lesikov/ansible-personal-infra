@@ -4,6 +4,7 @@ ansible_python_interpreter: /usr/bin/env python3
 pip_package: python3-pip
 pip_install_packages:
   - name: docker
+  - name: psycopg2
 
 baikal_net_internal_subnet: 172.20.71.0/24
 baikal_ip: 172.20.71.3

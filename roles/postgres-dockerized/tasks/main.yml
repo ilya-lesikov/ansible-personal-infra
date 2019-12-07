@@ -1,0 +1,69 @@
+---
+- name: Create docker network internal_postgres
+  docker_network:
+    name: "{{ pg_net_name }}"
+    attachable: true
+    ipam_config:
+      - subnet: "{{ pg_net_internal_subnet }}"
+    driver_options:
+      com.docker.network.postgres.enable_icc: true
+
+- name: Create postgres data volume
+  docker_volume:
+    name: "{{ pg_volume_data_name }}"
+
+- name: Make config dir
+  file:
+    path: "{{ pg_confdir_host }}"
+    state: directory
+    mode: 0755
+
+- name: Template config
+  template:
+    src: "{{ pg_config }}.j2"
+    dest: "{{ pg_confdir_host }}/{{ pg_config }}"
+    mode: 0660
+
+- name: Create postgres container
+  docker_container:
+    name: "{{ pg_host }}"
+    image: "{{ pg_image }}"
+    restart_policy: always
+    hostname: "{{ pg_host }}"
+    env:
+      POSTGRES_PASSWORD: "{{ pg_admin_pass }}"
+      POSTGRES_USER: "{{ pg_admin_user }}"
+    volumes:
+      - "{{ pg_volume_data_name }}:{{ pg_datadir_mount }}"
+      - "{{ pg_confdir_host }}:{{ pg_confdir_mount }}"
+    networks:
+      - name: "{{ pg_net_name }}"
+        ipv4_address: "{{ pg_ip }}"
+        aliases: "{{ pg_host }}"
+    networks_cli_compatible: true  # hide deprecation warning
+    network_mode: "{{ pg_net_name }}"  # hide deprecation warning
+    shm_size: "{{ pg_shm_size }}"
+
+- name: Wait until postgres container is ready
+  wait_for:
+    host: "{{ pg_ip }}"
+    port: 5432
+    timeout: 120
+
+- name: Create postgres users
+  postgresql_user:
+    name: "{{ item.name }}"
+    password: "{{ item.password }}"
+    login_host: "{{ pg_ip }}"
+    login_user: "{{ pg_admin_user }}"
+    login_password: "{{ pg_admin_pass }}"
+  loop: "{{ pg_users }}"
+
+- name: Create postgres databases
+  postgresql_db:
+    name: "{{ item.name }}"
+    owner: "{{ item.owner }}"
+    login_host: "{{ pg_ip }}"
+    login_user: "{{ pg_admin_user }}"
+    login_password: "{{ pg_admin_pass }}"
+  loop: "{{ pg_dbs }}"

@@ -1,0 +1,9 @@
+---
+- name: Prepare
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Install python for Ansible
+      raw: apt -y update && apt install -y python3-minimal python3-docker python3-psycopg2 postgresql-client
+      become: true
+      changed_when: false
