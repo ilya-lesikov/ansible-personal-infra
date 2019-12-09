@@ -1,0 +1,48 @@
+---
+- name: Wait until nextcloud container is ready
+  wait_for:
+    host: "{{ nxc_ip }}"
+    port: 80
+    timeout: 120
+
+- name: Is nextcloud set up
+  shell: |
+    set -o pipefail
+    {{ nxc_occ_exec }} status --no-warnings --output=json | jq '.installed'
+  args:
+    executable: /bin/bash
+  changed_when: false
+  register: is_nextcloud_set_up
+
+- name: Setting up nextcloud
+  shell: |
+    {{ nxc_occ_exec }} maintenance:install --database=pgsql \
+      --database-name={{ nxc_db_name }} --database-host={{ nxc_db_host }} \
+      --database-user={{ nxc_db_user }} --database-pass={{ nxc_db_pass }} \
+      --admin-user={{ nxc_admin_user }} --admin-pass={{ nxc_admin_pass }} \
+      --admin-email={{ nxc_admin_email }}
+  when: is_nextcloud_set_up.stdout == "false"
+
+- name: Get trusted domains
+  shell: |
+    {{ nxc_occ_exec }} config:system:get trusted_domains
+  changed_when: false
+  failed_when: false
+  register: trusted_domains
+
+- name: Add fqdn as trusted domain
+  shell: |
+    {{ nxc_occ_exec }} config:system:set --value="{{ nxc_fqdn }}" trusted_domains 99
+  when: nxc_fqdn not in trusted_domains.stdout_lines
+
+- name: Get overwriteprotocol value
+  shell: |
+    {{ nxc_occ_exec }} config:system:get overwriteprotocol
+  changed_when: false
+  failed_when: false
+  register: overwriteprotocol
+
+- name: Set overwriteprotocol
+  shell: |
+    {{ nxc_occ_exec }} config:system:set --value={{ nxc_overwriteprotocol }} overwriteprotocol
+  when: overwriteprotocol.stdout != nxc_overwriteprotocol

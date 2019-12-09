@@ -10,9 +10,9 @@ FILECONTENT = "filecontent"
 def upload_file(request):
     opts = request.config.option
 
-    url = urljoin(opts.nxc_baseurl, opts.nxc_files_dav_prefix,
-                  opts.nxc_test_file)
-    resp = put(url, data=FILECONTENT, auth=(opts.nxc_user, opts.nxc_pass))
+    url = f"{opts.nxc_baseurl}/{opts.nxc_files_dav_prefix}/{opts.nxc_user}/{opts.nxc_test_file}"
+    resp = put(url, data=FILECONTENT, auth=(opts.nxc_user, opts.nxc_pass),
+               verify=False)
     return resp
 
 
@@ -20,9 +20,8 @@ def upload_file(request):
 def delete_file(request):
     opts = request.config.option
 
-    url = urljoin(opts.nxc_baseurl, opts.nxc_files_dav_prefix,
-                  opts.nxc_test_file)
-    resp = delete(url, auth=(opts.nxc_user, opts.nxc_pass))
+    url = f"{opts.nxc_baseurl}/{opts.nxc_files_dav_prefix}/{opts.nxc_user}/{opts.nxc_test_file}"
+    resp = delete(url, auth=(opts.nxc_user, opts.nxc_pass), verify=False)
     return resp
 
 
@@ -30,9 +29,8 @@ def delete_file(request):
 def download_file(request):
     opts = request.config.option
 
-    url = urljoin(opts.nxc_baseurl, opts.nxc_files_dav_prefix,
-                  opts.nxc_test_file)
-    resp = get(url, auth=(opts.nxc_user, opts.nxc_pass))
+    url = f"{opts.nxc_baseurl}/{opts.nxc_files_dav_prefix}/{opts.nxc_user}/{opts.nxc_test_file}"
+    resp = get(url, auth=(opts.nxc_user, opts.nxc_pass), verify=False)
     return resp
 
 
@@ -48,6 +46,6 @@ def test_download_file(upload_file, download_file, delete_file):
     assert upload_resp.ok
     download_resp = download_file
     assert download_resp.ok
-    assert download_resp.content == FILECONTENT
+    assert download_resp.content.decode() == FILECONTENT
     delete_resp = delete_file
     assert delete_resp.ok

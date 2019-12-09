@@ -1,6 +1,7 @@
 ---
 nxc_image: nextcloud:17.0
 nxc_fqdn: nextcloud.example.org
+nxc_overwriteprotocol: http
 
 nxc_admin_user: admin  # Applies initially on setup
 nxc_admin_pass: CHANGEME  # Applies initially on setup

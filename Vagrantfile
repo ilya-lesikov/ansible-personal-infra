@@ -14,7 +14,7 @@ Vagrant.configure('2') do |config|
     ub1804.vm.box = 'generic/ubuntu1804'
     ub1804.vm.hostname = 'home-server1-staging'
     # update /etc/hosts on host
-    ub1804.hostsupdater.aliases = [baikal_domain]
+    ub1804.hostsupdater.aliases = [baikal_domain, nxc_fqdn]
     ub1804.vm.network 'private_network', ip: '10.20.30.2'
 
     ub1804.vm.provider 'libvirt' do |libvirt|
@@ -56,10 +56,10 @@ Vagrant.configure('2') do |config|
       host_shell.inline = <<-SCRIPT
         cd test/smoke/pytest
         pytest -x --color=yes --tb=line \
-          --baikal-baseurl='https://#{baikal_domain}/' \
+          --baikal-baseurl='https://#{baikal_domain}' \
           --baikal-user='admin' \
           --baikal-pass='CHANGEME' \
-          --nxc_baseurl='https://#{nxc_fqdn}' \
+          --nxc-baseurl='https://#{nxc_fqdn}' \
           --nxc-user='admin' \
           --nxc-pass='CHANGEME'
       SCRIPT

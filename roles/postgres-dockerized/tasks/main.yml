@@ -1,7 +1,7 @@
 ---
 - name: Create docker network internal_postgres
   docker_network:
-    name: "{{ pg_net_name }}"
+    name: "{{ pg_net_internal }}"
     attachable: true
     ipam_config:
       - subnet: "{{ pg_net_internal_subnet }}"
@@ -36,17 +36,14 @@
     volumes:
       - "{{ pg_volume_data_name }}:{{ pg_datadir_mount }}"
       - "{{ pg_confdir_host }}:{{ pg_confdir_mount }}"
-    networks:
-      - name: "{{ pg_net_name }}"
-        ipv4_address: "{{ pg_ip }}"
-        aliases: "{{ pg_host }}"
+    networks: "{{ pg_default_nets | union(pg_extra_nets) }}"
     networks_cli_compatible: true  # hide deprecation warning
-    network_mode: "{{ pg_net_name }}"  # hide deprecation warning
+    network_mode: "{{ pg_net_internal }}"  # hide deprecation warning
     shm_size: "{{ pg_shm_size }}"
 
 - name: Wait until postgres container is ready
   wait_for:
-    host: "{{ pg_ip }}"
+    host: "{{ pg_net_internal_ip }}"
     port: 5432
     timeout: 120
 
@@ -54,7 +51,7 @@
   postgresql_user:
     name: "{{ item.name }}"
     password: "{{ item.password }}"
-    login_host: "{{ pg_ip }}"
+    login_host: "{{ pg_net_internal_ip }}"
     login_user: "{{ pg_admin_user }}"
     login_password: "{{ pg_admin_pass }}"
   loop: "{{ pg_users }}"
@@ -63,7 +60,7 @@
   postgresql_db:
     name: "{{ item.name }}"
     owner: "{{ item.owner }}"
-    login_host: "{{ pg_ip }}"
+    login_host: "{{ pg_net_internal_ip }}"
     login_user: "{{ pg_admin_user }}"
     login_password: "{{ pg_admin_pass }}"
   loop: "{{ pg_dbs }}"

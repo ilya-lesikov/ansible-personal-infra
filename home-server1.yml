@@ -1,10 +1,19 @@
 ---
-- hosts: baikal
+- hosts: home_server1
   become: true
-  roles:
-    - geerlingguy.pip
-    - geerlingguy.docker
-    - baikal-dockerized
-    - postgres-dockerized
-    - nextcloud-dockerized
-    - traefik-dockerized
+  tasks:
+    - import_role:
+        name: geerlingguy.pip
+    - import_role:
+        name: geerlingguy.docker
+    - import_role:
+        name: baikal-dockerized
+    - import_role:
+        name: nextcloud-dockerized
+    - import_role:
+        name: postgres-dockerized
+    - import_role:
+        name: nextcloud-dockerized
+        tasks_from: setup
+    - import_role:
+        name: traefik-dockerized

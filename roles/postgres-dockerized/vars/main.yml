@@ -3,3 +3,8 @@ pg_datadir_mount: /var/lib/postgresql/data
 pg_volume_data_name: "{{ pg_host }}_data"
 pg_config: postgresql.conf
 pg_confdir_mount: /etc/postgresql
+
+pg_default_nets:
+  - name: "{{ pg_net_internal }}"
+    ipv4_address: "{{ pg_net_internal_ip }}"
+    aliases: "{{ pg_host }}"

@@ -2,6 +2,11 @@
 - name: Converge
   hosts: all
   become: true
-  roles:
-    - role: geerlingguy.docker
-    - role: nextcloud-dockerized
+  tasks:
+    - import_role:
+        name: geerlingguy.docker
+    - import_role:
+        name: nextcloud-dockerized
+    - import_role:
+        name: nextcloud-dockerized
+        tasks_from: setup.yml

@@ -1,6 +1,5 @@
 ---
 ansible_python_interpreter: /usr/bin/env python3
-
 pip_package: python3-pip
 pip_install_packages:
   - name: docker
@@ -12,20 +11,23 @@ baikal_ip: 172.20.71.3
 baikal_force_https: true
 
 pg_net_internal_subnet: 172.20.72.0/24
-pg_ip: 172.20.72.3
+pg_net_internal_ip: 172.20.72.3
 pg_dbs:
   - name: "{{ nxc_db_name }}"
     owner: "{{ nxc_db_user }}"
+pg_extra_nets:
+  - name: "{{ nxc_net_name }}"
+    ipv4_address: 172.20.73.50
 
 nxc_ip: 172.20.73.3
 nxc_net_internal_subnet: 172.20.73.0/24
-
-nxc_db_host: 172.20.73.1
+nxc_db_host: 172.20.73.50
 nxc_db_name: "{{ nxc_db_user }}"
+nxc_overwriteprotocol: https
+nxc_force_https: true
 
 traefik_net_external_isolated_subnet: 172.20.70.0/24
 traefik_net_external_isolated_ip: 172.20.70.2
 traefik_extra_nets:
   - name: "{{ baikal_net_name }}"
-  - name: "{{ pg_net_name }}"
   - name: "{{ nxc_net_name }}"
