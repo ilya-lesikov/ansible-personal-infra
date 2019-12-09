@@ -1,0 +1,43 @@
+---
+- name: Prepare
+  hosts: all
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Apt-get update
+      apt:
+        update_cache: true
+
+    - name: Install packages
+      apt:
+        name:
+          - python3-minimal
+          - python3-docker
+          - python3-psycopg2
+          - postgresql
+
+    - name: Configure postgres
+      shell: |
+        sed -i "s/.*listen_addresses.*/listen_addresses='*'/" \
+          /etc/postgresql/*/main/postgresql.conf
+        sed -i "s/^host.*/host all all all trust/" \
+          /etc/postgresql/*/main/pg_hba.conf
+        systemctl restart postgresql
+      changed_when: false
+
+    - name: Configure hosts
+      shell: |
+        echo '172.10.73.3 nextcloud.example.org' >> /etc/hosts
+      changed_when: false
+
+    - name: Create nextcloud postgres user
+      postgresql_user:
+        name: nextcloud
+        password: CHANGEME
+      become_user: postgres
+
+    - name: Create nextcloud postgres db
+      postgresql_db:
+        name: nextcloud
+        owner: nextcloud
+      become_user: postgres

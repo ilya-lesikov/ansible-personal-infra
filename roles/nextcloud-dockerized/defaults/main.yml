@@ -1,0 +1,17 @@
+---
+nxc_image: nextcloud:17.0
+nxc_fqdn: nextcloud.example.org
+
+nxc_admin_user: admin  # Applies initially on setup
+nxc_admin_pass: CHANGEME  # Applies initially on setup
+nxc_admin_email: changeme@example.org  # Applies initially on setup
+
+nxc_host: nextcloud
+nxc_ip: 172.10.73.3
+nxc_net_internal_subnet: 172.10.73.0/24
+nxc_net_name: internal_nextcloud
+
+nxc_db_host: 172.10.73.1
+nxc_db_name: nextcloud
+nxc_db_user: nextcloud
+nxc_db_pass: CHANGEME

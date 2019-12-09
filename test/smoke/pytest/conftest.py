@@ -11,7 +11,12 @@ OPTS = {
     'baikal_pass': 'test1',
     'baikal_dav_user': fake.user_name(),
     'baikal_dav_pass': fake.password(),
-    'baikal_dav_email': fake.email()
+    'baikal_dav_email': fake.email(),
+    'nxc_baseurl': 'http://localhost:80',
+    'nxc_files_dav_prefix': 'remote.php/dav/files',
+    'nxc_user': 'admin',
+    'nxc_pass': 'CHANGEME',
+    'nxc_test_file': 'testfile1.txt'
 }
 
 

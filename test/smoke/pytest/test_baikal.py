@@ -2,8 +2,8 @@
 from requests import Session
 from requests.compat import urljoin
 from requests_html import HTML
+from caldav import DAVClient
 import pytest
-import caldav
 
 VCAL_UID = '0000000008'
 VCAL = f"""\
@@ -37,7 +37,7 @@ def dav_login(request):
     opts = request.config.option
 
     url = urljoin(opts.baikal_baseurl, '/dav.php/')
-    client = caldav.DAVClient(
+    client = DAVClient(
         url, username=opts.baikal_dav_user, password=opts.baikal_dav_pass,
         ssl_verify_cert=False
     )

@@ -4,6 +4,7 @@
 
 Vagrant.configure('2') do |config|
   baikal_domain = 'staging.baikal.lesikov.com'
+  nxc_fqdn = 'staging.nextcloud.lesikov.com'
 
   config.vagrant.plugins = %w[
     vagrant-hostsupdater vagrant-host-shell vagrant-hosts
@@ -26,6 +27,7 @@ Vagrant.configure('2') do |config|
     # update /etc/hosts on guest
     ub1804.vm.provision 'hosts' do |provisioner|
       provisioner.add_host '127.0.90.1', [baikal_domain]
+      provisioner.add_host '127.0.90.2', [nxc_fqdn]
     end
 
     # make ubuntu use standard dns-server on the gateway instead of some shitty
@@ -56,7 +58,10 @@ Vagrant.configure('2') do |config|
         pytest -x --color=yes --tb=line \
           --baikal-baseurl='https://#{baikal_domain}/' \
           --baikal-user='admin' \
-          --baikal-pass='CHANGEME'
+          --baikal-pass='CHANGEME' \
+          --nxc_baseurl='https://#{nxc_fqdn}' \
+          --nxc-user='admin' \
+          --nxc-pass='CHANGEME'
       SCRIPT
     end
   end

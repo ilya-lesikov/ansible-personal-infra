@@ -1,8 +1,8 @@
 ---
 pg_image: postgres:12.1
 
-pg_admin_user: postgres
-pg_admin_pass: CHANGEME
+pg_admin_user: postgres  # Applies initially on first run with data dir empty
+pg_admin_pass: CHANGEME  # Applies initially on first run with data dir empty
 pg_confdir_host: /config/postgres
 pg_shm_size: 256M
 

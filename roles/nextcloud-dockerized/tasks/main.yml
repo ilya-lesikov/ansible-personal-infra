@@ -1,0 +1,73 @@
+---
+- name: Install jq
+  apt:
+    name: jq
+    update_cache: true
+
+- name: Create docker network internal_nextcloud
+  docker_network:
+    name: "{{ nxc_net_name }}"
+    attachable: true
+    ipam_config:
+      - subnet: "{{ nxc_net_internal_subnet }}"
+    driver_options:
+      com.docker.network.nextcloud.enable_icc: true
+
+- name: Create nextcloud data volume
+  docker_volume:
+    name: "{{ nxc_volume_data }}"
+
+- name: Create nextcloud db volume
+  docker_volume:
+    name: "{{ nxc_volume_db }}"
+
+- name: Create nextcloud container
+  docker_container:
+    name: "{{ nxc_host }}"
+    image: "{{ nxc_image }}"
+    restart_policy: always
+    hostname: "{{ nxc_host }}"
+    volumes:
+      - "{{ nxc_volume_data }}:{{ nxc_data_mount }}"
+      - "{{ nxc_volume_db }}:{{ nxc_db_mount }}"
+    networks:
+      - name: "{{ nxc_net_name }}"
+        ipv4_address: "{{ nxc_ip }}"
+        aliases: "{{ nxc_host }}"
+    networks_cli_compatible: true  # hide deprecation warning
+    network_mode: "{{ nxc_net_name }}"  # hide deprecation warning
+
+- name: Wait until nextcloud container is ready
+  wait_for:
+    host: "{{ nxc_ip }}"
+    port: 80
+    timeout: 120
+
+- name: Is nextcloud set up
+  shell: |
+    set -o pipefail
+    {{ nxc_occ_exec }} status --no-warnings --output=json | jq '.installed'
+  args:
+    executable: /bin/bash
+  changed_when: false
+  register: is_nextcloud_set_up
+
+- name: Setting up nextcloud
+  shell: |
+    {{ nxc_occ_exec }} maintenance:install --database=pgsql \
+      --database-name={{ nxc_db_name }} --database-host={{ nxc_db_host }} \
+      --database-user={{ nxc_db_user }} --database-pass={{ nxc_db_pass }} \
+      --admin-user={{ nxc_admin_user }} --admin-pass={{ nxc_admin_pass }} \
+      --admin-email={{ nxc_admin_email }}
+  when: is_nextcloud_set_up.stdout == "false"
+
+- name: Get trusted domains
+  shell: |
+    {{ nxc_occ_exec }} config:system:get trusted_domains
+  changed_when: false
+  register: trusted_domains
+
+- name: Add fqdn as trusted domain
+  shell: |
+    {{ nxc_occ_exec }} config:system:set --value="{{ nxc_fqdn }}" trusted_domains 99
+  when: nxc_fqdn not in trusted_domains.stdout_lines
