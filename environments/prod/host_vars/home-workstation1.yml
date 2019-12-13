@@ -1,43 +1,67 @@
 ---
+rst_backup_cmd: >-
+  dpkg --get-selections > /to_backup/dpkg_selections.list ;
+  ionice -c2 -n7 restic backup --one-file-system
+  --iexclude "**/*nobackup*"
+  --iexclude "**/.Trash*"
+  --iexclude "**/*cache*"
+  --iexclude "**/*tmp*"
+  --iexclude "**/*temp*"
+  --iexclude "**/*log*"
+  --iexclude "**/*backup*"
+  --iexclude "**/*.bak"
+  --iexclude "/home/*/Downloads*"
+  --iexclude "/home/*/git"
+  --iexclude "/home/*/hg"
+  --iexclude "/home/*/opt"
+  --iexclude "/home/*/mnt"
+  --iexclude "/home/*/.local"
+  --iexclude "/home/*/.thumbnails"
+  --iexclude "/home/*/.ansible"
+  --iexclude "/home/*/.vagrant.d/boxes"
+  --iexclude "/home/*/.wine"
+  --iexclude "/home/*/.cargo"
+  --iexclude "/home/*/.gem"
+  --iexclude "/home/*/.go"
+  --iexclude "/home/*/.golang"
+  --iexclude "/home/*/.node_modules"
+  --iexclude "/home/*/.npm"
+  --iexclude "/home/*/.var"
+  --iexclude "/home/*/go"
+  --iexclude "/home/*/snap"
+  --iexclude "/var/lib/libvirt/images/**/*.iso"
+  /config
+  /home
+  /root
+  /var/local
+  /usr/local/bin
+  /usr/local/etc
+  /etc
+  /to_backup
 
 restic_repos:
-  - name: sftp-home-server1
+  - name: sftp-home-workstation1
     url: sftp:home-workstation1@home-server1:/backup/home-workstation1
-    password: "{{ rst_sftp_home_workstation1_to_home_server1_pass }}"
+    password: "{{ rst_backup_home_workstation1_pass }}"
     jobs:
-      - command: >-
-          ionice -c2 -n7
-          restic backup --one-file-system
-          --exclude "**/.Trash*"
-          --iexclude "**/*cache*"
-          --iexclude "**/*tmp*"
-          --iexclude "**/*temp*"
-          --iexclude "**/*log*"
-          --iexclude "**/*backup*"
-          --iexclude "**/*.bak"
-          --exclude "/home/*/Downloads*"
-          --iexclude "/home/*/git"
-          --iexclude "/home/*/hg"
-          --iexclude "/home/*/opt"
-          --iexclude "/home/*/mnt"
-          --iexclude "/home/*/.local"
-          --iexclude "/home/*/.thumbnails"
-          --iexclude "/home/*/.ansible"
-          --iexclude "/home/*/.vagrant.d/boxes"
-          --iexclude "/home/*/.wine"
-          --iexclude "/home/*/.cargo"
-          --iexclude "/home/*/.gem"
-          --iexclude "/home/*/.go"
-          --iexclude "/home/*/.golang"
-          --iexclude "/home/*/.node_modules"
-          --iexclude "/home/*/.npm"
-          --iexclude "/home/*/.var"
-          --iexclude "/home/*/go"
-          --iexclude "/home/*/snap"
-          --iexclude "/var/lib/libvirt/images/**/*.iso"
-          /var/tmp/test
-        at: '0 13 * * * *'
-    retention_time: '0 14 * * * *'
+      - command: "{{ rst_backup_cmd }}"
+        at: '0 13 * * *'
+    retention_time: '0 14 * * *'
+    retention:
+      daily: 14
+      weekly: 13
+      tags:
+        - keep
+  - name: b2-home-workstation1
+    url: "b2:home-workstation1:backup/home-workstation1"
+    password: "{{ rst_backup_home_workstation1_pass }}"
+    remote_credentials:
+      b2_account_id: "{{ rst_backup_home_workstation1_b2_id }}"
+      b2_account_key: "{{ rst_backup_home_workstation1_b2_key }}"
+    jobs:
+      - command: "{{ rst_backup_cmd }}"
+        at: '30 13 * * *'
+    retention_time: '30 14 * * *'
     retention:
       daily: 14
       weekly: 13
