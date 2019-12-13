@@ -17,10 +17,6 @@
   docker_volume:
     name: "{{ nxc_volume_data }}"
 
-- name: Create nextcloud db volume
-  docker_volume:
-    name: "{{ nxc_volume_db }}"
-
 - name: Create nextcloud container
   docker_container:
     name: "{{ nxc_host }}"
@@ -29,7 +25,6 @@
     hostname: "{{ nxc_host }}"
     volumes:
       - "{{ nxc_volume_data }}:{{ nxc_data_mount }}"
-      - "{{ nxc_volume_db }}:{{ nxc_db_mount }}"
     networks:
       - name: "{{ nxc_net_name }}"
         ipv4_address: "{{ nxc_ip }}"

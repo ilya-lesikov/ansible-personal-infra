@@ -1,0 +1,70 @@
+---
+traefik_host_api_port: 8081
+traefik_services:
+  - name: baikal
+    http: true
+    https: true
+    http_to_https: "{{ baikal_force_https | bool }}"
+    url: "http://{{ baikal_ip }}:80"
+    rule: "Host(\
+           `{{ baikal_domain }}`,\
+           `{{ baikal_private_domain }}`,\
+           `{{ baikal_public_domain }}`\
+           )"
+  - name: nextcloud
+    http: true
+    https: true
+    http_to_https: "{{ nxc_force_https | bool }}"
+    url: "http://{{ nxc_ip }}:80"
+    rule: "Host(`{{ nxc_fqdn }}`)"
+
+restic_repos:
+  - name: local
+    url: /backup/local
+    password: "{{ rst_local_home_server1_pass }}"
+    jobs:
+      - command: >-
+          ionice -c2 -n7
+          restic backup --one-file-system
+          --exclude "**/.Trash*"
+          --iexclude "**/*cache*"
+          --iexclude "**/*tmp*"
+          --iexclude "**/*temp*"
+          --iexclude "**/*log*"
+          --iexclude "**/*backup*"
+          --iexclude "**/*.bak"
+          --exclude "/home/*/Downloads*"
+          --iexclude "/home/*/git"
+          --iexclude "/home/*/hg"
+          --iexclude "/home/*/opt"
+          --iexclude "/home/*/mnt"
+          --iexclude "/home/*/.local"
+          --iexclude "/home/*/.thumbnails"
+          --iexclude "/home/*/.ansible"
+          --iexclude "/home/*/.vagrant.d/boxes"
+          --iexclude "/home/*/.wine"
+          --iexclude "/home/*/.cargo"
+          --iexclude "/home/*/.gem"
+          --iexclude "/home/*/.go"
+          --iexclude "/home/*/.golang"
+          --iexclude "/home/*/.node_modules"
+          --iexclude "/home/*/.npm"
+          --iexclude "/home/*/.var"
+          --iexclude "/home/*/go"
+          --iexclude "/home/*/snap"
+          --iexclude "/var/lib/libvirt/images/**/*.iso"
+          /config
+          /home
+          /var/local
+          /usr/local/bin
+          /usr/local/etc
+          /var/lib/docker/volumes
+          /var/lib/libvirt/images
+          /srv/music
+        at: '0 3 * * * *'
+    retention_time: '0 4 * * * *'
+    retention:
+      daily: 14
+      weekly: 13
+      tags:
+        - keep

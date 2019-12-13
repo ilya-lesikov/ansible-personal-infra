@@ -1,0 +1,45 @@
+---
+
+restic_repos:
+  - name: sftp-home-server1
+    url: sftp:home-workstation1@home-server1:/backup/home-workstation1
+    password: "{{ rst_sftp_home_workstation1_to_home_server1_pass }}"
+    jobs:
+      - command: >-
+          ionice -c2 -n7
+          restic backup --one-file-system
+          --exclude "**/.Trash*"
+          --iexclude "**/*cache*"
+          --iexclude "**/*tmp*"
+          --iexclude "**/*temp*"
+          --iexclude "**/*log*"
+          --iexclude "**/*backup*"
+          --iexclude "**/*.bak"
+          --exclude "/home/*/Downloads*"
+          --iexclude "/home/*/git"
+          --iexclude "/home/*/hg"
+          --iexclude "/home/*/opt"
+          --iexclude "/home/*/mnt"
+          --iexclude "/home/*/.local"
+          --iexclude "/home/*/.thumbnails"
+          --iexclude "/home/*/.ansible"
+          --iexclude "/home/*/.vagrant.d/boxes"
+          --iexclude "/home/*/.wine"
+          --iexclude "/home/*/.cargo"
+          --iexclude "/home/*/.gem"
+          --iexclude "/home/*/.go"
+          --iexclude "/home/*/.golang"
+          --iexclude "/home/*/.node_modules"
+          --iexclude "/home/*/.npm"
+          --iexclude "/home/*/.var"
+          --iexclude "/home/*/go"
+          --iexclude "/home/*/snap"
+          --iexclude "/var/lib/libvirt/images/**/*.iso"
+          /var/tmp/test
+        at: '0 13 * * * *'
+    retention_time: '0 14 * * * *'
+    retention:
+      daily: 14
+      weekly: 13
+      tags:
+        - keep

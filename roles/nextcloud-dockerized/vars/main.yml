@@ -1,6 +1,4 @@
 ---
 nxc_volume_data: "{{ nxc_host }}_data"
 nxc_data_mount: /var/www/html
-nxc_volume_db: "{{ nxc_host }}_db"
-nxc_db_mount: /var/lib/postgresql/data
 nxc_occ_exec: "docker exec -u www-data {{ nxc_host }} php '{{ nxc_data_mount }}/occ'"

@@ -1,2 +1,5 @@
 [home_server1]
 home-server1-staging
+
+[home_workstation1]
+home-workstation1-staging

@@ -1,0 +1,55 @@
+---
+- hosts: home_server1
+  become: true
+  tasks:
+    - name: testtt
+      include_role:
+        name: geerlingguy.pip
+        public: true
+        apply:
+          tags: pip, common
+    - include_role:
+        name: geerlingguy.docker
+        public: true
+        apply:
+          tags: docker, common
+    - include_role:
+        name: baikal-dockerized
+        public: true
+        apply:
+          tags: baikal
+    - include_role:
+        name: nextcloud-dockerized
+        public: true
+        apply:
+          tags: nextcloud
+    - include_role:
+        name: postgres-dockerized
+        public: true
+        apply:
+          tags: postgres, nextcloud
+    - include_role:
+        name: nextcloud-dockerized
+        public: true
+        tasks_from: setup
+        apply:
+          tags: nextcloud
+    - include_role:
+        name: traefik-dockerized
+        public: true
+        apply:
+          tags: traefik
+    - include_role:
+        name: paulfantom.restic
+        public: true
+        apply:
+          tags: restic
+
+- hosts: home_workstation1
+  become: true
+  tasks:
+    - include_role:
+        name: paulfantom.restic
+        public: true
+        apply:
+          tags: restic
