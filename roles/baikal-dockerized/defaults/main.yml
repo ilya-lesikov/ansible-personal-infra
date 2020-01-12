@@ -1,5 +1,7 @@
 ---
-baikal_image: ckulka/baikal:0.5.3-nginx
+baikal_version: 0.6.1
+baikal_image_base: ckulka/baikal
+baikal_image_tag: "{{ baikal_version }}-nginx"
 
 baikal_tz: Europe/Moscow
 # Default password is CHANGEME

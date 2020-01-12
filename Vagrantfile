@@ -48,7 +48,7 @@ end
 def pytest(vm, test_dir, opts)
   vm.provision 'host_shell' do |host_shell|
     host_shell.inline = <<-SCRIPT
-        cd test/smoke/pytest/#{test_dir}
+        cd test/e2e/pytest/#{test_dir}
         pytest -x --color=yes --tb=line #{opts.join(' ')}
     SCRIPT
   end

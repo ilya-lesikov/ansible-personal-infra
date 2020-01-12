@@ -50,7 +50,7 @@
     build:
       path: "{{ baikal_build_dir }}"
       args:
-        image: "{{ baikal_image }}"
+        image: "{{ baikal_image_base }}:{{ baikal_image_tag }}"
         conf_dir: "{{ baikal_conf_dir }}"
     source: build
 
