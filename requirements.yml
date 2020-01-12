@@ -1,2 +1,5 @@
 ---
-- name: paulfantom.restic
+# FIXME: wait until our PR merged to upstream then switch to upstream
+- src: https://github.com/ilya-lesikov/ansible-restic
+  version: include_exclude_files
+  name: restic

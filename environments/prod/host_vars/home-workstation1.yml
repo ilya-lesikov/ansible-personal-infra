@@ -2,42 +2,8 @@
 rst_backup_cmd: >-
   dpkg --get-selections > /to_backup/dpkg_selections.list ;
   ionice -c2 -n7 restic backup --one-file-system
-  --iexclude "**/*nobackup*"
-  --iexclude "**/.Trash*"
-  --iexclude "**/*cache*"
-  --iexclude "**/*tmp*"
-  --iexclude "**/*temp*"
-  --iexclude "**/*log*"
-  --iexclude "**/*backup*"
-  --iexclude "**/*.bak"
-  --iexclude "/home/*/Downloads*"
-  --iexclude "/home/*/git"
-  --iexclude "/home/*/hg"
-  --iexclude "/home/*/opt"
-  --iexclude "/home/*/mnt"
-  --iexclude "/home/*/.local"
-  --iexclude "/home/*/.thumbnails"
-  --iexclude "/home/*/.ansible"
-  --iexclude "/home/*/.vagrant.d/boxes"
-  --iexclude "/home/*/.wine"
-  --iexclude "/home/*/.cargo"
-  --iexclude "/home/*/.gem"
-  --iexclude "/home/*/.go"
-  --iexclude "/home/*/.golang"
-  --iexclude "/home/*/.node_modules"
-  --iexclude "/home/*/.npm"
-  --iexclude "/home/*/.var"
-  --iexclude "/home/*/go"
-  --iexclude "/home/*/snap"
-  --iexclude "/var/lib/libvirt/images/**/*.iso"
-  /config
-  /home
-  /root
-  /var/local
-  /usr/local/bin
-  /usr/local/etc
-  /etc
-  /to_backup
+  --files-from {{ restic_config_path }}/includes
+  --exclude-file {{ restic_config_path }}/excludes
 
 restic_repos:
   - name: sftp-home-workstation1
@@ -67,3 +33,78 @@ restic_repos:
       weekly: 13
       tags:
         - keep
+
+restic_includes_files:
+  - filename: includes
+    includes: |
+      /config
+      /home
+      /root
+      /var/local
+      /usr/local/bin
+      /usr/local/etc
+      /var/lib/docker/volumes
+      /var/lib/libvirt/images
+      /etc
+      /to_backup
+
+restic_excludes_files:
+  - filename: excludes
+    excludes: |
+      **/*.nobackup
+      **/*backup
+      **/*.bak
+      **/.Trash
+      **/*cache
+      **/*Cache
+      **/*CACHE
+      **/*tmp
+      **/*Tmp
+      **/*TMP
+      **/*temp
+      **/*Temp
+      **/*TEMP
+      **/*log
+      **/*Log
+      **/*LOG
+      /home/*/Downloads*
+      /home/*/Nextcloud
+      /home/*/git
+      /home/*/hg
+      /home/*/opt
+      /home/*/mnt
+      /home/*/.local
+      /home/*/.thumbnails
+      /home/*/.ansible
+      /home/*/.vagrant.d/boxes
+      /home/*/.wine
+      /home/*/.cargo
+      /home/*/.gem
+      /home/*/.go
+      /home/*/.golang
+      /home/*/.node_modules
+      /home/*/.npm
+      /home/*/.var
+      /home/*/go
+      /home/*/snap
+      /root/Downloads*
+      /root/Nextcloud
+      /root/git
+      /root/hg
+      /root/opt
+      /root/mnt
+      /root/.local
+      /root/.thumbnails
+      /root/.ansible
+      /root/.vagrant.d/boxes
+      /root/.wine
+      /root/.cargo
+      /root/.gem
+      /root/.go
+      /root/.golang
+      /root/.node_modules
+      /root/.npm
+      /root/.var
+      /root/go
+      /root/snap
+      /var/lib/libvirt/images/**/*.iso
