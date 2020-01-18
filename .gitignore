@@ -171,4 +171,5 @@ __pycache__/
 
 *.log
 .env.yml
-
+/environments/**/001_cross_env_secrets.yml
+/environments/**/secrets.yml
