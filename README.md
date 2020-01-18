@@ -1,5 +1,5 @@
 # ansible-personal-infra
-Automation of software managed on my personal infrastructure
+Automation of personal infrastructure
 
 ## Prepare
 ```bash
