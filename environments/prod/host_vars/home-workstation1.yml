@@ -69,8 +69,6 @@ restic_excludes_files:
       **/*LOG
       /home/*/Downloads*
       /home/*/Nextcloud
-      /home/*/git
-      /home/*/hg
       /home/*/opt
       /home/*/mnt
       /home/*/.local
@@ -89,8 +87,6 @@ restic_excludes_files:
       /home/*/snap
       /root/Downloads*
       /root/Nextcloud
-      /root/git
-      /root/hg
       /root/opt
       /root/mnt
       /root/.local
