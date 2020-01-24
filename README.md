@@ -25,7 +25,7 @@ less README   # check out for additional instructions in role's README
 molecule test
 ```
 
-### End-to-end tests in a staging environment
+### End-to-end tests in the staging environment
 ```bash
 vagrant up
 ```
