@@ -26,8 +26,12 @@ nxc_db_name: "{{ nxc_db_user }}"
 nxc_overwriteprotocol: https
 nxc_force_https: true
 
+terr_net_internal_ip: 172.20.74.3
+terr_net_internal_subnet: 172.20.74.0/24
+
 traefik_net_external_isolated_subnet: 172.20.70.0/24
 traefik_net_external_isolated_ip: 172.20.70.2
 traefik_extra_nets:
   - name: "{{ baikal_net_name }}"
   - name: "{{ nxc_net_name }}"
+  - name: internal_terraria

@@ -13,9 +13,6 @@ driver:
       memory: 1536
       cpus: 4
 
-lint:
-  name: yamllint
-
 platforms:
   - name: instance
     box: generic/ubuntu1804
@@ -23,10 +20,14 @@ platforms:
       - 'cpu_mode = "custom"'
       - 'cpu_model = "qemu64"'
 
+lint: |
+  set -e
+  yamllint .
+  ansible-lint
+  flake8
+
 provisioner:
   name: ansible
-  lint:
-    name: ansible-lint
   options:
     extra-vars:
       cloudflare_api_email: "$CLOUDFLARE_API_EMAIL"
@@ -34,8 +35,6 @@ provisioner:
       traefik_log_level: DEBUG
 
 verifier:
-  name: testinfra
+  name: ansible
   options:
     no-flaky-report: true
-  lint:
-    name: flake8

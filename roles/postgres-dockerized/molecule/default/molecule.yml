@@ -13,9 +13,6 @@ driver:
       memory: 1536
       cpus: 4
 
-lint:
-  name: yamllint
-
 platforms:
   - name: instance
     box: generic/ubuntu1804
@@ -23,14 +20,16 @@ platforms:
       - 'cpu_mode = "custom"'
       - 'cpu_model = "qemu64"'
 
+lint: |
+  set -e
+  yamllint .
+  ansible-lint
+  flake8
+
 provisioner:
   name: ansible
-  lint:
-    name: ansible-lint
 
 verifier:
-  name: testinfra
+  name: ansible
   options:
     no-flaky-report: true
-  lint:
-    name: flake8

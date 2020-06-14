@@ -1,0 +1,10 @@
+---
+terr_image: ryshe/terraria:4.4.0-pre11
+
+terr_server_pass: CHANGEME
+
+terr_hostname: terraria
+terr_net_internal_ip: 172.10.74.3
+terr_net_internal_subnet: 172.10.74.0/24
+
+docker_volumes_dir: /var/lib/docker/volumes

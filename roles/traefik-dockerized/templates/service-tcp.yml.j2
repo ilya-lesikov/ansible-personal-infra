@@ -1,0 +1,13 @@
+tcp:
+  routers:
+    tcp-{{ item.name }}:
+      entryPoints:
+        - {{ item.name }}
+      rule: "HostSNI(`*`)"
+      service: {{ item.name }}
+
+  services:
+    {{ item.name }}:
+      loadBalancer:
+        servers:
+          - address: "{{ item.ip }}:{{ item.port }}"

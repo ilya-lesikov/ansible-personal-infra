@@ -28,6 +28,7 @@
   docker_container:
     name: "{{ pg_host }}"
     image: "{{ pg_image }}"
+    pull: true
     restart_policy: always
     hostname: "{{ pg_host }}"
     env:

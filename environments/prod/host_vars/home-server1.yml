@@ -17,6 +17,10 @@ traefik_services:
     http_to_https: "{{ nxc_force_https | bool }}"
     url: "http://{{ nxc_ip }}:80"
     rule: "Host(`{{ nxc_fqdn }}`)"
+traefik_tcp_services:
+  - name: terraria
+    ip: "{{ terr_net_internal_ip }}"
+    port: 7777
 
 rst_backup_cmd: >-
   dpkg --get-selections > /to_backup/dpkg_selections.list ;

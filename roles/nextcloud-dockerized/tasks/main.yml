@@ -21,6 +21,7 @@
   docker_container:
     name: "{{ nxc_host }}"
     image: "{{ nxc_image }}"
+    pull: true
     restart_policy: always
     hostname: "{{ nxc_host }}"
     volumes:

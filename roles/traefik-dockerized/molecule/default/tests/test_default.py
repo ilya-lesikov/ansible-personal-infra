@@ -33,6 +33,7 @@ def test_traefik_ports_reachable(host):
     assert addr.port(80).is_reachable
     assert addr.port(443).is_reachable
     assert addr.port(8080).is_reachable
+    assert addr.port(7777).is_reachable
 
 
 @flaky(max_runs=10, min_passes=1, rerun_filter=_delay_rerun)
@@ -49,5 +50,7 @@ def test_traefik_service1_added(host):
 
     assert '"http-service1@file"' in out
     assert '"https-service1@file"' in out
+    assert '"tcp-terraria@file"' in out
     assert '"rule":"Host(`service1.example.org`)"' in out
     assert '"url":"http://172.10.71.3:80"' in out
+    assert '"address":"172.10.71.3:7777"' in out

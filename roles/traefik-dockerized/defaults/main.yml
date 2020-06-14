@@ -7,6 +7,7 @@ traefik_net_external_isolated_ip: 172.10.70.2
 traefik_host_http_port: 80
 traefik_host_https_port: 443
 traefik_host_api_port: 8080
+traefik_host_terraria_port: 7777
 
 # format as in `docker_container` module, `networks:` parameter
 traefik_extra_nets: []
@@ -29,3 +30,8 @@ traefik_services:
     http_to_https: false
     url: http://172.10.71.3:80
     rule: "Host(`service1.example.org`)"
+
+traefik_tcp_services:
+  - name: terraria
+    ip: 172.10.71.3
+    port: 7777

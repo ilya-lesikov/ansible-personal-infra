@@ -1,0 +1,50 @@
+---
+- name: Create docker network internal_terraria
+  docker_network:
+    name: internal_terraria
+    attachable: true
+    ipam_config:
+      - subnet: "{{ terr_net_internal_subnet }}"
+    driver_options:
+      com.docker.network.terraria.enable_icc: true
+
+- name: Create terraria worlds volume
+  docker_volume:
+    name: terraria_data
+
+- name: Harden volume permissions
+  file:
+    path: "{{ docker_volumes_dir }}/terraria_data"
+    state: directory
+    mode: 0700
+
+- name: Template config
+  template:
+    src: config.json.j2
+    dest: "{{ docker_volumes_dir }}/terraria_data/_data/config.json"
+    mode: 0666
+  changed_when: false
+
+- name: Copy world file if not exists
+  copy:
+    src: world1.wld
+    dest: "{{ docker_volumes_dir }}/terraria_data/_data/world1.wld"
+    force: false
+
+- name: Create terraria container
+  docker_container:
+    name: terraria
+    image: "{{ terr_image }}"
+    pull: true
+    restart_policy: always
+    hostname: "{{ terr_hostname }}"
+    env:
+      WORLD_FILENAME: world1.wld
+    volumes:
+      - "terraria_data:/root/.local/share/Terraria/Worlds"
+    networks:
+      - name: internal_terraria
+        ipv4_address: "{{ terr_net_internal_ip }}"
+        aliases: "{{ terr_hostname }}"
+    networks_cli_compatible: true  # hides deprecation warning
+    network_mode: internal_terraria  # hides deprecation warning

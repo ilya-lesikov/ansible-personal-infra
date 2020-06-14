@@ -103,4 +103,3 @@ restic_excludes_files:
       /root/.var
       /root/go
       /root/snap
-      /var/lib/libvirt/images/**/*.iso
