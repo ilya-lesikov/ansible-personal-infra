@@ -1,0 +1,32 @@
+http:
+  routers:
+    http-{{ item.name }}:
+      entryPoints:
+        - http
+      rule: "{{ item.rule }}"
+      service: dummy
+      middlewares:
+        - redirect-{{ item.name }}
+
+    https-{{ item.name }}:
+      entryPoints:
+        - https
+      rule: "{{ item.rule }}"
+      service: dummy
+      middlewares:
+        - redirect-{{ item.name }}
+      tls:
+        certResolver: cloudflare
+
+  services:
+    dummy:
+      loadBalancer:
+        servers:
+          - url: 127.0.0.1
+
+  middlewares:
+    redirect-{{ item.name }}:
+      redirectRegex:
+        regex: "{{ item.regex }}"
+        replacement: "{{ item.replacement }}"
+        permanent: {{ item.permanent | bool }}

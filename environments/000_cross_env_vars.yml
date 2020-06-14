@@ -8,7 +8,6 @@ pip_install_packages:
 
 baikal_net_internal_subnet: 172.20.71.0/24
 baikal_ip: 172.20.71.3
-baikal_force_https: true
 
 pg_net_internal_subnet: 172.20.72.0/24
 pg_net_internal_ip: 172.20.72.3
@@ -24,7 +23,6 @@ nxc_net_internal_subnet: 172.20.73.0/24
 nxc_db_host: 172.20.73.50
 nxc_db_name: "{{ nxc_db_user }}"
 nxc_overwriteprotocol: https
-nxc_force_https: true
 
 terr_net_internal_ip: 172.20.74.3
 terr_net_internal_subnet: 172.20.74.0/24

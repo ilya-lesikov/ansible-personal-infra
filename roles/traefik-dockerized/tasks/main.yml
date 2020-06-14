@@ -45,6 +45,13 @@
     mode: 0660
   loop: "{{ traefik_tcp_services }}"
 
+- name: template_redirect_services
+  template:
+    src: "service-redirect.yml.j2"
+    dest: "{{ traefik_confdir_host }}/service-redirect-{{ item.name }}.yml"
+    mode: 0660
+  loop: "{{ traefik_redirect_services }}"
+
 - name: create_traefik_container
   docker_container:
     name: "{{ traefik_host }}"

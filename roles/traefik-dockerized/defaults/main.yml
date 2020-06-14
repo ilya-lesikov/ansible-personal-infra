@@ -35,3 +35,9 @@ traefik_tcp_services:
   - name: terraria
     ip: 172.10.71.3
     port: 7777
+
+traefik_redirect_services:
+  - name: root
+    regex: "https?://lesikov.com/?(.*)"
+    replacement: "https://ilya-lesikov.com/$1"
+    permanent: true
