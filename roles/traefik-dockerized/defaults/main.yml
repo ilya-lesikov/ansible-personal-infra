@@ -38,6 +38,7 @@ traefik_tcp_services: []
 
 traefik_redirect_services:
   - name: root
+    rule: "Host(`lesikov.com`)"
     regex: "https?://lesikov.com/?(.*)"
     replacement: "https://ilya-lesikov.com/$1"
     permanent: true
