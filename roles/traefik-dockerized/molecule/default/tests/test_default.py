@@ -50,7 +50,7 @@ def test_traefik_service1_added(host):
 
     assert '"http-service1@file"' in out
     assert '"https-service1@file"' in out
-    assert '"tcp-terraria@file"' in out
+    # assert '"tcp-terraria@file"' in out
     assert '"rule":"Host(`service1.example.org`)"' in out
     assert '"url":"http://172.10.71.3:80"' in out
     assert '"address":"172.10.71.3:7777"' in out

@@ -33,11 +33,11 @@
         tasks_from: setup
         apply:
           tags: nextcloud
-    - include_role:
-        name: terraria-dockerized
-        public: true
-        apply:
-          tags: terraria
+    # - include_role:
+    #     name: terraria-dockerized
+    #     public: true
+    #     apply:
+    #       tags: terraria
     - include_role:
         name: traefik-dockerized
         public: true

@@ -23,10 +23,10 @@ traefik_redirect_services:
     regex: "https?://lesikov.com/?(.*)"
     replacement: "https://ilya-lesikov.com/$1"
     permanent: true
-traefik_tcp_services:
-  - name: terraria
-    ip: "{{ terr_net_internal_ip }}"
-    port: 7777
+traefik_tcp_services: []
+#   - name: terraria
+#     ip: "{{ terr_net_internal_ip }}"
+#     port: 7777
 
 rst_backup_cmd: >-
   dpkg --get-selections > /to_backup/dpkg_selections.list ;

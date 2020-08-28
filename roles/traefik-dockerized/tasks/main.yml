@@ -63,7 +63,7 @@
       - "{{ traefik_host_http_port }}:80"
       - "{{ traefik_host_https_port }}:443"
       - "127.0.0.1:{{ traefik_host_api_port }}:8080"
-      - "{{ traefik_host_terraria_port }}:7777"
+      # - "{{ traefik_host_terraria_port }}:7777"
     volumes:
       - "{{ traefik_data_volume }}:{{ traefik_data_mount }}"
       - "{{ traefik_confdir_host }}:{{ traefik_confdir_mount }}"
@@ -73,7 +73,7 @@
       - "--entrypoints.http.address=':80'"
       - "--entrypoints.https.address=':443'"
       - "--entrypoints.api.address=':8080'"
-      - "--entrypoints.terraria.address=':7777'"
+      # - "--entrypoints.terraria.address=':7777'"
       - "--certificatesresolvers.cloudflare.acme.dnschallenge.provider\
         =cloudflare"
       - "--certificatesresolvers.cloudflare.acme.dnschallenge.resolvers\

@@ -32,4 +32,4 @@ traefik_net_external_isolated_ip: 172.20.70.2
 traefik_extra_nets:
   - name: "{{ baikal_net_name }}"
   - name: "{{ nxc_net_name }}"
-  - name: internal_terraria
+  # - name: internal_terraria
