@@ -1,5 +1,5 @@
 ---
-nxc_image: nextcloud:17.0
+nxc_image: nextcloud:18.0.8
 nxc_fqdn: nextcloud.example.org
 nxc_overwriteprotocol: http
 

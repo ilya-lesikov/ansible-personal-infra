@@ -1,5 +1,5 @@
 ---
-traefik_image: traefik:v2.1
+traefik_image: traefik:v2.3
 
 traefik_host: traefik
 traefik_net_external_isolated_subnet: 172.10.70.0/24
